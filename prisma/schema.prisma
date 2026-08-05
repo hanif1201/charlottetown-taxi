@@ -1,0 +1,40 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Booking {
+  id            String   @id @default(cuid())
+  service       String
+  serviceKey    String
+  tripType      String
+  pickup        String
+  dropoff       String?
+  when          DateTime
+  waitTime      String?
+  returnWhen    DateTime?
+  returnFrom    String?
+  passengers    String
+  luggage       String?
+  childSeats    String?
+  accessibility String?
+  vehicle       String?
+  vehicleCount  String?
+  name          String
+  phone         String
+  email         String
+  confirmBy     String?
+  notes         String?
+  pageUrl       String?
+  serviceDetail Json?
+  createdAt     DateTime @default(now())
+
+  @@index([createdAt])
+}
