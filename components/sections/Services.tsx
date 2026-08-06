@@ -215,6 +215,30 @@ export function Services() {
               </a>
             </div>
           </article>
+
+          <article className="svc svc-icon">
+            <svg
+              className="sic"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.2}
+              aria-hidden="true"
+            >
+              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
+              <path d="M9.2 12.1l1.9 1.9 3.7-3.8" />
+            </svg>
+            <div className="sbody">
+              <h3>Executive Transfers</h3>
+              <p>
+                An executive sedan or SUV, a chauffeur briefed on your schedule, and a fixed price
+                agreed in advance — for business travel, client collections and wedding parties.
+              </p>
+              <a className="go" href="#book">
+                Request a quote →
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
