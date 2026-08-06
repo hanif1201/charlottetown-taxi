@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/user/Library/Caches/ms-playwright/**)",
+      "Bash(npx --yes playwright@1.62.1 install chromium)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(find ~/.npm/_npx -maxdepth 4 -iname \"playwright\" -type d 2>/dev/null | head -5)",
+      "Read(//Users/user/.npm/_npx/**)"
+    ]
+  }
+}
