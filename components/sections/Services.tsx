@@ -36,9 +36,9 @@ export function Services() {
 
           <article className="svc svc-photo">
             <div
-              className="simg simg-suv"
+              className="simg simg-airport"
               role="img"
-              aria-label="Charlottetown Taxi vehicle at the Arrivals door of Charlottetown Airport YYG"
+              aria-label="Airplane at the gate at Charlottetown Airport YYG"
             />
             <div className="sbody">
               <h3>Airport Transfers</h3>

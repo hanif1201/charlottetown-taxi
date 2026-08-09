@@ -10,7 +10,8 @@
   /* background photos */
   --hero-img:url('/images/hero.jpg');
   --sedan-img:url('/images/sedan.jpg');
-  --suv-img:url('/images/airport.jpeg');
+  --suv-img:url('/images/suv.jpg');
+  --airport-img:url('/images/airport.jpeg');
   --fleet-img:url('/images/fleet.jpg');
   --tour-img:url('/images/tour.jpg');
 
@@ -426,6 +427,7 @@ footer{background:var(--ink);color:rgba(248,246,241,.58);padding-top:78px;border
 .svc-photo .simg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .9s cubic-bezier(.19,1,.22,1);}
 .simg-sedan{background-image:var(--sedan-img);}
 .simg-suv{background-image:var(--suv-img);}
+.simg-airport{background-image:var(--airport-img);}
 .simg-tour{background-image:var(--tour-img);}
 .svc-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,22,34,.15) 26%,rgba(11,22,34,.94) 100%);transition:background .4s;}
 .svc-photo:hover .simg{transform:scale(1.06);}
