@@ -48,7 +48,12 @@ export function Footer() {
                 </svg>
               </a>
             </div>
-            <a className="greview" href="https://www.google.com/maps" rel="noopener">
+            <a
+              className="greview"
+              href="https://maps.app.goo.gl/ZZrF6niQafN5k8JJ8"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className="gr-stars" aria-hidden="true">
                 ★★★★★
               </span>

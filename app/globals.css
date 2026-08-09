@@ -10,7 +10,7 @@
   /* background photos */
   --hero-img:url('/images/hero.jpg');
   --sedan-img:url('/images/sedan.jpg');
-  --suv-img:url('/images/suv.jpg');
+  --suv-img:url('/images/airport.jpeg');
   --fleet-img:url('/images/fleet.jpg');
   --tour-img:url('/images/tour.jpg');
 
@@ -308,6 +308,11 @@ textarea{resize:vertical;}
 .rev p{font-size:14px;color:var(--body);margin-top:15px;line-height:1.85;font-weight:300;}
 .rev .who{margin-top:19px;font-size:12.5px;color:var(--ink);font-weight:600;}
 .rev .who span{display:block;font-weight:400;color:var(--muted);font-size:10.5px;margin-top:5px;text-transform:uppercase;letter-spacing:.13em;}
+.rev-see-all{display:inline-block;margin-top:15px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink);font-weight:700;border-bottom:1px solid var(--brass);padding-bottom:3px;}
+.rev-see-all:hover{color:var(--brass-dk);}
+.rev-google{display:inline-flex;align-items:center;gap:7px;margin-top:16px;padding-top:14px;border-top:1px solid var(--stone-line);font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;font-weight:600;}
+.rev-google svg{width:14px;height:14px;flex-shrink:0;}
+.rev-google:hover{color:var(--ink);}
 @media(max-width:900px){.rev-grid{grid-template-columns:1fr;}}
 
 /* ---------- Licences ---------- */
