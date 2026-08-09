@@ -5,7 +5,7 @@ export function Services() {
         <div className="head reveal">
           <span className="eyebrow">Our Services</span>
           <h2>
-            One licensed provider for <em>every journey on the Island</em>
+            Our Charlottetown Taxi &amp; PEI Transport Services — <em>every journey on the Island</em>
           </h2>
           <p>
             A ride across Charlottetown and a three-day golf itinerary are different disciplines.
@@ -23,12 +23,12 @@ export function Services() {
               aria-label="Charlottetown Taxi executive sedan on a Prince Edward Island street"
             />
             <div className="sbody">
-              <h3>Taxi Service</h3>
+              <h3>Charlottetown Taxi Service</h3>
               <p>
                 Licensed cabs across Charlottetown, Stratford and Cornwall at regulated fares from
                 $8.50 — 24/7, no surge pricing.
               </p>
-              <a className="go" href="/taxi-service/">
+              <a className="go" href="#book">
                 Charlottetown taxi service →
               </a>
             </div>
@@ -41,12 +41,12 @@ export function Services() {
               aria-label="Airplane at the gate at Charlottetown Airport YYG"
             />
             <div className="sbody">
-              <h3>Airport Transfers</h3>
+              <h3>YYG Airport Taxi &amp; Transfers</h3>
               <p>
                 Charlottetown Airport taxi service at YYG with live flight monitoring, meet &amp;
                 greet and published airport fares.
               </p>
-              <a className="go" href="/airport-transfer/">
+              <a className="go" href="#airport">
                 YYG airport taxi →
               </a>
             </div>
@@ -59,12 +59,12 @@ export function Services() {
               aria-label="Green Gables Heritage Place in Cavendish, Prince Edward Island"
             />
             <div className="sbody">
-              <h3>Island Tours</h3>
+              <h3>Private PEI Island Tours</h3>
               <p>
                 Private PEI tours to Anne of Green Gables, Cavendish, North Rustico and Point Prim —
                 at your pace with a local driver.
               </p>
-              <a className="go" href="/island-tours/">
+              <a className="go" href="#book">
                 Private tours PEI →
               </a>
             </div>
@@ -85,12 +85,12 @@ export function Services() {
               <path d="M2 21h20" />
             </svg>
             <div className="sbody">
-              <h3>Cruise &amp; Ferry</h3>
+              <h3>Charlottetown Cruise Port Transfers</h3>
               <p>
                 Cruise ship transportation in PEI — Charlottetown Cruise Port, Wood Islands Ferry and
                 CTMA Souris, timed to docking and all-aboard.
               </p>
-              <a className="go" href="/cruise-transfers/">
+              <a className="go" href="#book">
                 Cruise port transfers →
               </a>
             </div>
@@ -110,12 +110,12 @@ export function Services() {
               <path d="M11 19h8" />
             </svg>
             <div className="sbody">
-              <h3>Golf Transportation</h3>
+              <h3>PEI Golf Course Transportation</h3>
               <p>
                 Golf transportation across PEI — Crowbush Cove, Brudenell, Dundarave and Green
                 Gables, multi-course itineraries with room for clubs.
               </p>
-              <a className="go" href="/golf-transportation/">
+              <a className="go" href="#book">
                 Golf transport PEI →
               </a>
             </div>
@@ -140,7 +140,7 @@ export function Services() {
                 Corporate transportation in PEI — executive travel for visiting teams and clients,
                 business accounts and monthly invoicing.
               </p>
-              <a className="go" href="/corporate-travel/">
+              <a className="go" href="#book">
                 Corporate transport PEI →
               </a>
             </div>
@@ -163,7 +163,7 @@ export function Services() {
                 Wedding transportation in PEI — wedding party transport and guest shuttles coordinated
                 across venues, timed to your run sheet.
               </p>
-              <a className="go" href="/event-transfers/">
+              <a className="go" href="#book">
                 Wedding transport PEI →
               </a>
             </div>
@@ -187,7 +187,7 @@ export function Services() {
                 Hourly chauffeur hire in Charlottetown — a vehicle and driver held for the hours you
                 book, with unlimited stops and wait time included.
               </p>
-              <a className="go" href="/hourly-chauffeur/">
+              <a className="go" href="#book">
                 Hourly chauffeur →
               </a>
             </div>
@@ -205,12 +205,12 @@ export function Services() {
               <path d="M4 12h4l2-5 4 10 2-5h4" />
             </svg>
             <div className="sbody">
-              <h3>Medical &amp; Long Distance</h3>
+              <h3>Medical &amp; Long-Distance Transport, PEI</h3>
               <p>
                 Medical appointment transportation across PEI and long-distance travel off-Island,
                 quoted upfront with no meter running.
               </p>
-              <a className="go" href="/medical-transportation/">
+              <a className="go" href="#book">
                 Medical &amp; long distance →
               </a>
             </div>

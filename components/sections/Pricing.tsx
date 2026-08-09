@@ -5,7 +5,7 @@ export function Pricing() {
         <div className="head reveal">
           <span className="eyebrow">Pricing</span>
           <h2>
-            Regulated fares, <em>agreed before you travel</em>
+            Charlottetown Taxi Fares — <em>regulated, agreed before you travel</em>
           </h2>
           <p>Nothing is added at the end of the journey, and nothing changes because the weather did.</p>
         </div>
@@ -91,6 +91,9 @@ export function Pricing() {
           <p className="price-note">
             Cash, Interac debit, Visa, Mastercard, American Express and Apple Pay accepted — card
             machine in every vehicle. Corporate accounts invoiced monthly.
+          </p>
+          <p className="price-note" style={{ marginTop: 8, opacity: 0.7, fontSize: 12.5 }}>
+            Fares current as of August 2026, per City of Charlottetown Taxi Bylaw #2021-TX-01.
           </p>
         </div>
       </div>

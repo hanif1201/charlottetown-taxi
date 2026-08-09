@@ -21,21 +21,16 @@ export function Hero() {
         </p>
 
         <h1 id="heroTitle" className="fade" style={delayVar('.15s')}>
-          Every road on this Island, <em>and someone who knows them all.</em>
+          Charlottetown Taxi <em>— 24/7 Taxi &amp; YYG Airport Transfers Across PEI</em>
         </h1>
 
         <p className="hc-lede fade" style={delayVar('.28s')}>
-          Charlottetown&rsquo;s locally owned private transportation company, serving all of Prince
-          Edward Island around the clock. YYG airport transfers, cruise port connections, private
-          Island tours, golf itineraries, weddings and corporate travel.
-        </p>
-        <p className="hc-lede fade" style={delayVar('.34s')}>
-          Professional licensed drivers, fixed fares set by City bylaw, and dispatch that answers
-          whatever the hour.
+          Locally owned, licensed and running around the clock. Zone fares set by City bylaw from
+          $8.50, airport transfers from $20, and dispatch that answers whatever the hour.
         </p>
 
         <p className="hc-line fade" style={delayVar('.44s')}>
-          Arrive unhurried. Leave nothing to chance.
+          Every road on this Island, and someone who knows them all.
         </p>
 
         <div className="hc-actions fade" style={delayVar('.54s')}>
@@ -62,7 +57,7 @@ export function Hero() {
         <ul className="hc-trust fade" style={delayVar('.72s')}>
           <li>BBB Accredited</li>
           <li>Licensed &amp; Insured</li>
-          <li>100+ Five-Star Reviews</li>
+          <li>Rated 5 Stars on Google</li>
           <li>24/7 Dispatch</li>
           <li>Local PEI Company</li>
           <li>Proudly Serving Prince Edward Island</li>

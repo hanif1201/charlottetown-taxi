@@ -26,7 +26,7 @@ export function TrustBar() {
               <path d="M9.2 12.1l1.9 1.9 3.7-3.8" />
             </svg>
             <span className="tc-k">Licensed &amp; Insured</span>
-            <span className="tc-l">City licensed · $1M coverage</span>
+            <span className="tc-l">City licensed · Commercially insured</span>
           </div>
           <div className="tcard reveal">
             <svg

@@ -15,19 +15,16 @@ export function Header() {
         <nav className="primary" aria-label="Primary">
           <ul>
             <li>
-              <Link href="/taxi-service/">Taxi</Link>
+              <a href="#services">Services</a>
             </li>
             <li>
-              <Link href="/airport-transfer/">Airport</Link>
+              <a href="#airport">Airport</a>
             </li>
             <li>
-              <Link href="/cruise-transfers/">Cruise</Link>
+              <a href="#pricing">Fares</a>
             </li>
             <li>
-              <Link href="/golf-transportation/">Golf</Link>
-            </li>
-            <li>
-              <Link href="/island-tours/">Tours</Link>
+              <a href="#fleet">Fleet</a>
             </li>
             <li>
               <a href="#coverage">Coverage</a>

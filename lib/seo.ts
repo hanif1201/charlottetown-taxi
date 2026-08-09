@@ -1,5 +1,11 @@
 export const SITE_URL = 'https://charlottetowntaxi.ca';
 
+// charlottetowntaxi.ca is not live yet — this build is only reachable at its
+// vercel.app URL. Flip to true once the custom domain is connected and
+// serving this deployment: it drives indexing (layout.tsx), robots.txt
+// (robots.ts) and the sitemap (sitemap.ts) together.
+export const SITE_IS_LIVE = false;
+
 export const businessJsonLd = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -13,8 +19,8 @@ export const businessJsonLd = {
       telephone: '+1-782-377-7533',
       email: 'info@charlottetowntaxi.ca',
       priceRange: '$$',
-      image: `${SITE_URL}/wp-content/uploads/charlottetown-taxi-group-transport.jpg`,
-      logo: `${SITE_URL}/wp-content/uploads/charlottetown-taxi-logo-mark.png`,
+      image: `${SITE_URL}/images/og-charlottetown-taxi.jpg`,
+      logo: `${SITE_URL}/images/logo-mark.png`,
       address: {
         '@type': 'PostalAddress',
         streetAddress: '72 Kensington Road',
@@ -47,6 +53,8 @@ export const businessJsonLd = {
         { '@type': 'City', name: 'Summerside' },
         { '@type': 'City', name: 'Montague' },
         { '@type': 'City', name: 'Souris' },
+        { '@type': 'Place', name: 'Charlottetown Airport (YYG)' },
+        { '@type': 'Place', name: 'Cavendish' },
         { '@type': 'AdministrativeArea', name: 'Prince Edward Island' },
       ],
       paymentAccepted: 'Cash, Interac Debit, Visa, Mastercard, American Express, Apple Pay',
@@ -60,10 +68,15 @@ export const businessJsonLd = {
         '@type': 'OfferCatalog',
         name: 'Transportation Services',
         itemListElement: [
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Taxi Service' } },
+          {
+            '@type': 'Offer',
+            itemOffered: { '@type': 'Service', name: 'Taxi Service' },
+            priceSpecification: { '@type': 'PriceSpecification', minPrice: '8.50', priceCurrency: 'CAD' },
+          },
           {
             '@type': 'Offer',
             itemOffered: { '@type': 'Service', name: 'Airport Transfers (YYG)' },
+            priceSpecification: { '@type': 'PriceSpecification', minPrice: '20.00', priceCurrency: 'CAD' },
           },
           {
             '@type': 'Offer',
@@ -90,7 +103,7 @@ export const businessJsonLd = {
       '@id': `${SITE_URL}/#organization`,
       name: 'Charlottetown Taxi',
       url: `${SITE_URL}/`,
-      logo: `${SITE_URL}/wp-content/uploads/charlottetown-taxi-logo-mark.png`,
+      logo: `${SITE_URL}/images/logo-mark.png`,
       sameAs: [
         'https://www.facebook.com/charlottetowntaxi',
         'https://www.instagram.com/charlottetowntaxi',
@@ -118,16 +131,19 @@ export const businessJsonLd = {
   ],
 };
 
+// Ordered by search demand (fares, airport, availability, payment, accessibility
+// first), matching the FAQ_LEFT/FAQ_RIGHT order in components/sections/Faq.tsx —
+// Google's FAQ rich result requires this schema to mirror the visible page content.
 export const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What areas of Prince Edward Island do you serve?',
+      name: 'How much is a taxi from Charlottetown Airport to downtown?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'We serve all of Prince Edward Island. Charlottetown, Stratford and Cornwall are fixed-fare zones; Summerside, Cavendish, Montague, Souris, Victoria-by-the-Sea and every other community are quoted before you travel.',
+        text: 'Airport transfers start at $20 under the tariff published by the Charlottetown Airport Authority. Dispatch confirms your exact fare before you travel and nothing is added at the end of the journey.',
       },
     },
     {
@@ -148,6 +164,54 @@ export const faqJsonLd = {
     },
     {
       '@type': 'Question',
+      name: 'Do you meet flights at Charlottetown Airport?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. We monitor your flight number and adjust the pickup automatically, so an early landing or a delay costs you nothing. Drivers can meet you inside Arrivals with a name board or at the curb.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How far in advance should I book an airport taxi?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The night before is enough for most departures. In July and August, on cruise days, and around holiday weekends, book two to three days ahead — pre-booking holds a vehicle for your exact time at no extra cost.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you operate 24 hours a day?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Dispatch runs around the clock, every day of the year, including overnight, holidays and through winter storms.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I get a taxi at 3am in Charlottetown?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Dispatch is answered by a person 24 hours a day, every day of the year. Late-night and pre-dawn airport runs are a routine part of what we do — call or text and we will tell you how far away the nearest vehicle is.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What payment methods do you accept?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Cash, Interac debit, Visa, Mastercard, American Express and Apple Pay. A card machine is carried in every vehicle, and corporate accounts can be invoiced monthly.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do your taxis take debit and credit cards?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. Every vehicle carries a card machine and accepts Interac debit, Visa, Mastercard, American Express and Apple Pay as well as cash. Section 12.1 of the Taxi Bylaw requires all licensed operators to accept electronic payment and to issue a receipt on request.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Can a Charlottetown taxi refuse card payment?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -164,10 +228,10 @@ export const faqJsonLd = {
     },
     {
       '@type': 'Question',
-      name: 'Do you operate 24 hours a day?',
+      name: 'What areas of Prince Edward Island do you serve?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Yes. Dispatch runs around the clock, every day of the year, including overnight, holidays and through winter storms.',
+        text: 'We serve all of Prince Edward Island. Charlottetown, Stratford and Cornwall are fixed-fare zones; Summerside, Cavendish, Montague, Souris, Victoria-by-the-Sea and every other community are quoted before you travel.',
       },
     },
     {
@@ -184,22 +248,6 @@ export const faqJsonLd = {
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'No. Fares stay the same during peak hours, cruise days, holidays and severe weather. The price quoted is the price you pay.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What payment methods do you accept?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Cash, Interac debit, Visa, Mastercard, American Express and Apple Pay. A card machine is carried in every vehicle, and corporate accounts can be invoiced monthly.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Do you meet flights at Charlottetown Airport?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes. We monitor your flight number and adjust the pickup automatically, so an early landing or a delay costs you nothing. Drivers can meet you inside Arrivals with a name board or at the curb.',
       },
     },
     {

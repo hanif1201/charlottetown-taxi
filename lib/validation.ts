@@ -32,7 +32,7 @@ export const bookingPayloadSchema = z
     vehicleCount: z.string().optional().default(''),
     name: z.string().min(1, 'Name is required'),
     phone: z.string().min(7, 'A valid phone number is required'),
-    email: z.string().email('A valid email is required'),
+    email: z.union([z.literal(''), z.string().email('Enter a valid email')]).optional().default(''),
     confirmBy: z.string().optional().default(''),
     notes: z.string().optional().default(''),
     pageUrl: z.string().optional().default(''),

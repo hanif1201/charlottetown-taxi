@@ -5,7 +5,7 @@ export function Fleet() {
         <div className="head reveal">
           <span className="eyebrow eyebrow-dk">The Fleet</span>
           <h2>
-            Matched to <em>your party and your bags</em>
+            Our Taxi Fleet — <em>matched to your party and your bags</em>
           </h2>
           <p>Tell us how many are travelling and what you&apos;re bringing — dispatch assigns the right vehicle automatically.</p>
         </div>

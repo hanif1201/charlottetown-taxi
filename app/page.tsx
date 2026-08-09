@@ -1,6 +1,7 @@
 import { Hero } from '@/components/sections/Hero';
 import { TrustBar } from '@/components/sections/TrustBar';
 import { Services } from '@/components/sections/Services';
+import { Airport } from '@/components/sections/Airport';
 import { Pricing } from '@/components/sections/Pricing';
 import { Fleet } from '@/components/sections/Fleet';
 import { BookingSection } from '@/components/booking/BookingSection';
@@ -15,6 +16,7 @@ export default function Home() {
       <Hero />
       <TrustBar />
       <Services />
+      <Airport />
       <Pricing />
       <Fleet />
       <BookingSection />

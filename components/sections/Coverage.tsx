@@ -12,7 +12,8 @@ export function Coverage() {
               fontWeight: 400,
             }}
           >
-            Serving <em style={{ fontStyle: 'italic', color: 'var(--champagne)' }}>all of Prince Edward Island</em>
+            Taxi Service Across{' '}
+            <em style={{ fontStyle: 'italic', color: 'var(--champagne)' }}>All of Prince Edward Island</em>
           </h2>
           <p
             style={{
@@ -105,6 +106,70 @@ export function Coverage() {
               <p>Eastern PEI, the Brudenell resort area, and both ferry terminals.</p>
             </div>
           </div>
+        </div>
+
+        <div className="reveal" style={{ gridColumn: '1 / -1', marginTop: 12 }}>
+          <table className="ptable">
+            <caption>Approximate distance and fare basis for routes we run most.</caption>
+            <thead>
+              <tr>
+                <th scope="col">From</th>
+                <th scope="col">To</th>
+                <th scope="col">Approx.</th>
+                <th scope="col">Fare basis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Charlottetown Airport</td>
+                <td>Downtown Charlottetown</td>
+                <td>6 km</td>
+                <td>Airport tariff, from $20</td>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>Stratford</td>
+                <td>5 km</td>
+                <td>Regulated zone fare</td>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>Cornwall</td>
+                <td>9 km</td>
+                <td>Regulated zone fare</td>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>Cavendish / north shore</td>
+                <td>40 km</td>
+                <td>Quoted before travel</td>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>Summerside</td>
+                <td>70 km</td>
+                <td>Quoted before travel</td>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>Brudenell / eastern PEI</td>
+                <td>60 km</td>
+                <td>Quoted before travel</td>
+              </tr>
+              <tr>
+                <td>Downtown</td>
+                <td>Wood Islands ferry</td>
+                <td>60 km</td>
+                <td>Quoted before travel</td>
+              </tr>
+              <tr>
+                <td>Charlottetown</td>
+                <td>Halifax Stanfield (YHZ)</td>
+                <td>300 km</td>
+                <td>Quoted before travel</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>

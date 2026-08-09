@@ -14,7 +14,7 @@ export function BookingSection() {
         <div className="head reveal center">
           <span className="eyebrow eyebrow-dk">Reserve Your Ride</span>
           <h2>
-            Book online, <em>confirmed by a person</em>
+            Book a Taxi in Charlottetown — <em>online, confirmed by a person</em>
           </h2>
           <p>Choose your service and the form adapts to collect exactly what we need — nothing more.</p>
         </div>

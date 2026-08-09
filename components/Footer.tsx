@@ -63,113 +63,37 @@ export function Footer() {
 
           <div className="foot-links">
             <div>
-              <h3>Services</h3>
+              <h3>Explore</h3>
               <ul>
                 <li>
-                  <Link href="/taxi-service/">Taxi Service</Link>
+                  <a href="#services">Services</a>
                 </li>
                 <li>
-                  <Link href="/airport-transfer/">Airport Transfers</Link>
+                  <a href="#airport">Airport (YYG) Transfers</a>
                 </li>
                 <li>
-                  <Link href="/cruise-transfers/">Cruise &amp; Ferry</Link>
+                  <a href="#pricing">Fares</a>
                 </li>
                 <li>
-                  <Link href="/golf-transportation/">Golf Transportation</Link>
+                  <a href="#fleet">Our Fleet</a>
                 </li>
                 <li>
-                  <Link href="/island-tours/">Island Tours</Link>
+                  <a href="#book">Book a Ride</a>
                 </li>
                 <li>
-                  <Link href="/corporate-travel/">Corporate Travel</Link>
+                  <a href="#coverage">Coverage</a>
                 </li>
                 <li>
-                  <Link href="/event-transfers/">Weddings &amp; Events</Link>
+                  <a href="#reviews">Reviews</a>
                 </li>
                 <li>
-                  <Link href="/hourly-chauffeur/">Hourly Chauffeur</Link>
-                </li>
-                <li>
-                  <Link href="/medical-transportation/">Medical Transport</Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3>Airport &amp; Ports</h3>
-              <ul>
-                <li>
-                  <Link href="/airport-transfer/">Charlottetown Airport (YYG)</Link>
-                </li>
-                <li>
-                  <Link href="/airport-transfer/">YYG Arrivals pickup</Link>
-                </li>
-                <li>
-                  <Link href="/airport-transfer/">YYG Departures</Link>
-                </li>
-                <li>
-                  <Link href="/cruise-transfers/">Charlottetown Cruise Port</Link>
-                </li>
-                <li>
-                  <Link href="/cruise-transfers/">Wood Islands Ferry</Link>
-                </li>
-                <li>
-                  <Link href="/cruise-transfers/">CTMA Ferry, Souris</Link>
-                </li>
-                <li>
-                  <Link href="/long-distance/">Confederation Bridge</Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3>Island Destinations</h3>
-              <ul>
-                <li>
-                  <Link href="/island-tours/">Green Gables, Cavendish</Link>
-                </li>
-                <li>
-                  <Link href="/island-tours/">Cavendish Beach</Link>
-                </li>
-                <li>
-                  <Link href="/island-tours/">North Rustico</Link>
-                </li>
-                <li>
-                  <Link href="/island-tours/">Brackley Beach</Link>
-                </li>
-                <li>
-                  <Link href="/island-tours/">Point Prim Lighthouse</Link>
-                </li>
-                <li>
-                  <Link href="/island-tours/">Victoria-by-the-Sea</Link>
-                </li>
-                <li>
-                  <Link href="/taxi-service/">Stratford &amp; Cornwall</Link>
-                </li>
-                <li>
-                  <Link href="/long-distance/">Summerside</Link>
-                </li>
-                <li>
-                  <Link href="/long-distance/">Montague &amp; Souris</Link>
+                  <a href="#faq">FAQs</a>
                 </li>
               </ul>
             </div>
             <div>
               <h3>Company</h3>
               <ul>
-                <li>
-                  <Link href="/about-us/">About Us</Link>
-                </li>
-                <li>
-                  <Link href="/our-fleet/">Our Fleet</Link>
-                </li>
-                <li>
-                  <Link href="/blog/">Travel Notes</Link>
-                </li>
-                <li>
-                  <Link href="/contact-us/">Contact</Link>
-                </li>
-                <li>
-                  <a href="#faq">FAQs</a>
-                </li>
                 <li>
                   <Link href="/privacy-policy/">Privacy Policy</Link>
                 </li>

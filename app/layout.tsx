@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Cormorant_Garamond, Inter } from 'next/font/google';
 import './globals.css';
-import { businessJsonLd, faqJsonLd, SITE_URL } from '@/lib/seo';
+import { businessJsonLd, faqJsonLd, SITE_URL, SITE_IS_LIVE } from '@/lib/seo';
 import { BookingProvider } from '@/components/booking/BookingProvider';
 import { RevealObserver } from '@/components/ui/RevealObserver';
 import { Header } from '@/components/Header';
@@ -24,36 +24,58 @@ const inter = Inter({
   display: 'swap',
 });
 
+const TITLE = 'Charlottetown Taxi | 24/7 PEI Taxi & YYG Airport Transfers';
+const DESCRIPTION =
+  "Charlottetown's locally owned taxi service, 24/7 across PEI. Regulated zone fares from $8.50, YYG airport transfers from $20, Island-wide travel at $2/km. No surge pricing, card accepted in every vehicle. Call or text (782) 377-7533.";
+const OG_DESCRIPTION =
+  '24/7 licensed taxi and airport transfers across Prince Edward Island. Regulated fares agreed before you travel, no surge pricing, dispatch answered by a person at any hour.';
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Charlottetown Taxi | Private Transportation & Airport Transfers, PEI',
-  description:
-    'Charlottetown’s locally owned private transportation company. YYG airport transfers, cruise port transportation, private Island tours, golf, wedding and corporate travel across Prince Edward Island. Licensed drivers, regulated fares, 24/7 dispatch.',
-  alternates: { canonical: '/' },
-  robots: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: SITE_IS_LIVE ? '/' : undefined,
+    languages: SITE_IS_LIVE ? { 'en-CA': '/' } : undefined,
+  },
+  robots: SITE_IS_LIVE
+    ? { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 }
+    : { index: false, follow: false },
+  authors: [{ name: 'Charlottetown Taxi' }],
+  publisher: 'Charlottetown Taxi',
   openGraph: {
     type: 'website',
     locale: 'en_CA',
     siteName: 'Charlottetown Taxi',
-    title: 'Charlottetown Taxi | Private Transportation & Airport Transfers, PEI',
-    description:
-      'Charlottetown’s locally owned private transportation company — YYG airport transfers, cruise port transportation, Island tours and executive travel across Prince Edward Island.',
+    title: TITLE,
+    description: OG_DESCRIPTION,
     url: '/',
     images: [
       {
-        url: '/wp-content/uploads/charlottetown-taxi-group-transport.jpg',
-        alt: 'Charlottetown Taxi vehicle at Charlottetown Airport, Prince Edward Island',
+        url: '/images/og-charlottetown-taxi.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Charlottetown Taxi — 24/7 taxi and airport transfers across Prince Edward Island',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Charlottetown Taxi | Private Transportation & Airport Transfers, PEI',
-    description:
-      'Locally owned private transportation across Prince Edward Island — airport, cruise, tours and executive travel.',
-    images: ['/wp-content/uploads/charlottetown-taxi-group-transport.jpg'],
+    title: TITLE,
+    description: OG_DESCRIPTION,
+    images: [
+      {
+        url: '/images/og-charlottetown-taxi.jpg',
+        alt: 'Charlottetown Taxi — 24/7 taxi and airport transfers across Prince Edward Island',
+      },
+    ],
   },
-  other: { 'theme-color': '#0B1622' },
+  other: {
+    'theme-color': '#0B1622',
+    'geo.region': 'CA-PE',
+    'geo.placename': 'Charlottetown',
+    ICBM: '46.25, -63.13',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

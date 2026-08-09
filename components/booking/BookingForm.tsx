@@ -355,9 +355,7 @@ export function BookingForm() {
         </div>
         <div className="frow">
           <div className="field">
-            <label htmlFor="email">
-              Email <span className="rq">*</span>
-            </label>
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"

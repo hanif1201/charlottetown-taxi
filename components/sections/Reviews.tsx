@@ -45,12 +45,12 @@ export function Reviews() {
   }
 
   return (
-    <section className="sec stone">
+    <section className="sec stone" id="reviews">
       <div className="wrap">
         <div className="head reveal">
           <span className="eyebrow eyebrow-dk">Rider Feedback</span>
           <h2>
-            What people say <em>after the ride</em>
+            Charlottetown Taxi Reviews — <em>what people say after the ride</em>
           </h2>
           <a className="rev-see-all" href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
             See all our reviews on Google →

@@ -13,7 +13,7 @@ const SERVICE_REQUIRED: Partial<Record<ServiceKey, string[]>> = {
 };
 
 export function requiredFieldIds(svc: ServiceKey, trip: TripType): string[] {
-  const ids = ['pickup', 'pax', 'name', 'phone', 'email', 'when'];
+  const ids = ['pickup', 'pax', 'name', 'phone', 'when'];
   if (svc !== 'hourly') ids.push('dropoff');
   if (trip === 'return') ids.push('retWhen');
   ids.push(...(SERVICE_REQUIRED[svc] ?? []));
