@@ -36,7 +36,7 @@ export function BookingForm() {
   const setField = (id: string, value: string) => dispatch({ type: 'SET_FIELD', id, value });
 
   function blurCheck(id: string) {
-    const required = requiredFieldIds(state.svc, state.trip).includes(id);
+    const required = requiredFieldIds(state.svc, state.trip, state.fields).includes(id);
     setInvalid((prev) => {
       const next = new Set(prev);
       if (isFieldValid(id, val(id), required)) next.delete(id);
@@ -49,7 +49,7 @@ export function BookingForm() {
     e.preventDefault();
     if (val('website')) return; // honeypot
 
-    const required = requiredFieldIds(state.svc, state.trip);
+    const required = requiredFieldIds(state.svc, state.trip, state.fields);
     const nextInvalid = new Set<string>();
     for (const id of required) {
       if (!isFieldValid(id, val(id), true)) nextInvalid.add(id);

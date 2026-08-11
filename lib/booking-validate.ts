@@ -7,6 +7,6 @@ export function isFieldValid(id: string, value: string, required: boolean): bool
   if (!v) return true;
   if (id === 'email' && !emailRe.test(v)) return false;
   if (id === 'phone' && !phoneRe.test(v)) return false;
-  if ((id === 'when' || id === 'retWhen') && new Date(v).getTime() < Date.now() - 60000) return false;
+  if ((id === 'when' || id === 'retWhen' || id === 'ret_when') && new Date(v).getTime() < Date.now() - 60000) return false;
   return true;
 }
