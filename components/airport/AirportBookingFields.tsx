@@ -124,6 +124,34 @@ export function AirportBookingFields() {
           </div>
           <div className="frow">
             <div className="field">
+              <label htmlFor="when">
+                Scheduled landing <span className="rq">*</span>
+              </label>
+              <input
+                type="datetime-local"
+                id="when"
+                min={minDT}
+                value={val('when')}
+                onChange={(e) => setField('when', e.target.value)}
+              />
+              <div className="err">Please enter your scheduled landing time.</div>
+            </div>
+            <div className="field">
+              <label htmlFor="dropoff">
+                Drop-off address <span className="rq">*</span>
+              </label>
+              <input
+                type="text"
+                id="dropoff"
+                placeholder="Hotel, home, venue or town"
+                value={val('dropoff')}
+                onChange={(e) => setField('dropoff', e.target.value)}
+              />
+              <div className="err">Please enter where you&rsquo;re heading.</div>
+            </div>
+          </div>
+          <div className="frow">
+            <div className="field">
               <label htmlFor="meet">Where should the driver meet you?</label>
               <select id="meet" value={val('meet')} onChange={(e) => setField('meet', e.target.value)}>
                 <option>Inside Arrivals with a name board</option>
@@ -247,6 +275,32 @@ export function AirportBookingFields() {
                 onChange={(e) => setField('flightTime', e.target.value)}
               />
               <div className="err">Please enter your departure time.</div>
+            </div>
+            <div className="field">
+              <label htmlFor="pickup">
+                Pickup address <span className="rq">*</span>
+              </label>
+              <input
+                type="text"
+                id="pickup"
+                placeholder="Hotel, home or venue"
+                value={val('pickup')}
+                onChange={(e) => setField('pickup', e.target.value)}
+              />
+              <div className="err">Please enter your pickup address.</div>
+            </div>
+          </div>
+          <div className="frow">
+            <div className="field">
+              <label htmlFor="when">Preferred pickup time</label>
+              <input
+                type="datetime-local"
+                id="when"
+                min={minDT}
+                value={val('when')}
+                onChange={(e) => setField('when', e.target.value)}
+              />
+              <div className="err">Please choose a valid future time.</div>
             </div>
             <div className="field">
               <label htmlFor="zone">Pickup zone</label>

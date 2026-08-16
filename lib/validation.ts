@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { SERVICE_ORDER } from '@/lib/services';
 
 const REQUIRED_DETAIL_KEYS: Partial<Record<string, string[]>> = {
-  airport: ['flight'],
+  airport: ['flight', 'payment'],
   cruise: ['port'],
   golf: ['golfers'],
   tour: ['duration'],

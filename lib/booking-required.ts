@@ -1,7 +1,7 @@
 import { ServiceKey, TripType } from '@/lib/services';
 
 const SERVICE_REQUIRED: Partial<Record<ServiceKey, string[]>> = {
-  airport: ['flight'],
+  airport: ['flight', 'payment', 'email'],
   cruise: ['port'],
   golf: ['golfers'],
   tour: ['duration'],

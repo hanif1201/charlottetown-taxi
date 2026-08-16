@@ -2,7 +2,7 @@ import { BookingState } from '@/lib/booking-types';
 import { SERVICES } from '@/lib/services';
 
 const DETAIL_FIELDS_BY_SERVICE: Partial<Record<string, string[]>> = {
-  airport: ['flight', 'airline', 'origin', 'meet', 'ret_flight', 'ret_when', 'ret_address'],
+  airport: ['flight', 'airline', 'origin', 'meet', 'payment', 'oversized', 'ret_flight', 'ret_when', 'ret_address'],
   cruise: ['port', 'ship', 'dock', 'aboard', 'shore'],
   tour: ['duration', 'pace', 'stops', 'lunch'],
   corporate: ['company', 'costcode', 'passenger', 'recurring', 'billing', 'account'],
