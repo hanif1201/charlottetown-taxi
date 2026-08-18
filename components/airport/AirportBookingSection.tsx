@@ -17,6 +17,11 @@ export function AirportBookingSection() {
     // This page is airport-only, so the shared booking state should reflect that
     // the moment it mounts rather than whatever service was last selected elsewhere.
     dispatch({ type: 'SET_SVC', svc: 'airport' });
+    // The initial state.dir === 'arrival' is a plain default value, not a dispatched
+    // action, so the SET_DIR reducer's pickup auto-fill never runs unless the rider
+    // happens to click the (already-selected) Arrival button. Dispatch it once here
+    // so the auto-fill actually fires even if they never touch the toggle.
+    dispatch({ type: 'SET_DIR', dir: 'arrival' });
   }, [dispatch]);
 
   const val = (id: string) => state.fields[id] || '';
