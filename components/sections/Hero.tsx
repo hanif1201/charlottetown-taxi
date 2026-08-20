@@ -8,7 +8,7 @@ export function Hero() {
         <div
           className="hc-photo"
           role="img"
-          aria-label="Charlottetown Taxi branded Ford Bronco waiting at the Arrivals door of Charlottetown Airport, Prince Edward Island"
+          aria-label="Charlottetown Taxi branded sedan parked outside the Charlottetown Airport terminal at dusk, Prince Edward Island"
         />
         <div className="hc-veil" aria-hidden="true" />
         <div className="hc-grain" aria-hidden="true" />

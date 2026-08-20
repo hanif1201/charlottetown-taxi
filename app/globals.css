@@ -9,6 +9,7 @@
 :root{
   /* background photos */
   --hero-img:url('/images/hero.jpg');
+  --hero-home-img:url('/images/hero-home.jpg');
   --sedan-img:url('/images/sedan.jpg');
   --suv-img:url('/images/suv.jpg');
   --airport-img:url('/images/airport.jpeg');
@@ -786,7 +787,7 @@ footer{background:var(--ink);color:rgba(248,246,241,.58);padding-top:78px;border
 /* ---------- Cinematic hero ---------- */
 .hero-cine{position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;overflow:hidden;background:var(--ink);}
 .hc-media{position:absolute;inset:0;}
-.hc-photo{position:absolute;inset:0;background-image:var(--hero-img);background-size:cover;background-position:center 42%;transform:scale(1.06);animation:hcZoom 22s ease-out forwards;}
+.hc-photo{position:absolute;inset:0;background-image:var(--hero-home-img);background-size:cover;background-position:center 42%;transform:scale(1.06);animation:hcZoom 22s ease-out forwards;}
 @keyframes hcZoom{from{transform:scale(1.12);}to{transform:scale(1.02);}}
 .hc-veil{position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(11,22,34,.62) 0%,rgba(11,22,34,.42) 32%,rgba(11,22,34,.88) 78%,rgba(11,22,34,.97) 100%),
@@ -939,6 +940,12 @@ footer{background:var(--ink);color:rgba(248,246,241,.58);padding-top:78px;border
 .fc-marks{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
 .fc-marks img{filter:brightness(0) invert(1);opacity:.5;object-fit:contain;transition:opacity .3s;}
 .fc-marks img:hover{opacity:.8;}
+/* BBB/TIAPEI are full-colour badge artwork, not monochrome brand marks like the
+   payment icons — the ghosting filter above reduces them to unrecognizable blobs. */
+.fc-marks img.fc-badge{filter:none;opacity:1;}
+.fc-pay{display:flex;align-items:center;gap:8px;}
+.fc-pay-chip{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:5px;padding:5px 10px;height:26px;box-sizing:border-box;}
+.fc-pay-chip svg{height:100%;width:auto;display:block;}
 .fc-lic{font-size:11px;color:rgba(248,246,241,.38);line-height:1.85;font-weight:300;}
 @media(max-width:1000px){.foot-top{grid-template-columns:1fr;}.foot-links{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:640px){.foot-links{grid-template-columns:1fr 1fr;gap:24px 18px;}.foot-creds{grid-template-columns:1fr;gap:18px;}}

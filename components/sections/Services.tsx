@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export function Services() {
   return (
     <section className="sec dark" id="services">
@@ -46,9 +48,9 @@ export function Services() {
                 Charlottetown Airport taxi service at YYG with live flight monitoring, meet &amp;
                 greet and published airport fares.
               </p>
-              <a className="go" href="#airport">
+              <Link className="go" href="/airport-transfer/">
                 YYG airport taxi →
-              </a>
+              </Link>
             </div>
           </article>
 

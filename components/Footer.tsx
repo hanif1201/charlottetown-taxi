@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { VisaLogo, MastercardLogo, GooglePayLogo } from '@/components/ui/Icon';
 
 export function Footer() {
   return (
@@ -69,7 +70,7 @@ export function Footer() {
                   <a href="#services">Services</a>
                 </li>
                 <li>
-                  <a href="#airport">Airport (YYG) Transfers</a>
+                  <Link href="/airport-transfer/">Airport (YYG) Transfers</Link>
                 </li>
                 <li>
                   <a href="#pricing">Fares</a>
@@ -125,14 +126,19 @@ export function Footer() {
 
         <div className="foot-creds">
           <div className="fc-marks">
-            <Image src="/images/bbb-badge.png" alt="BBB Accredited Business" width={210} height={80} />
-            <Image src="/images/tiapei-badge.png" alt="TIAPEI Proud Member" width={130} height={130} />
-            <Image
-              src="/images/payment-icons.png"
-              alt="Visa, Mastercard and Apple Pay accepted"
-              width={259}
-              height={32}
-            />
+            <Image className="fc-badge" src="/images/bbb-badge.png" alt="BBB Accredited Business" width={210} height={80} />
+            <Image className="fc-badge" src="/images/tiapei-badge.png" alt="TIAPEI Proud Member" width={130} height={130} />
+            <div className="fc-pay" aria-label="Visa, Mastercard and Google Pay accepted">
+              <span className="fc-pay-chip">
+                <VisaLogo />
+              </span>
+              <span className="fc-pay-chip">
+                <MastercardLogo />
+              </span>
+              <span className="fc-pay-chip">
+                <GooglePayLogo />
+              </span>
+            </div>
           </div>
           <p className="fc-lic">
             Licensed and commercially insured under the City of Charlottetown Taxi Bylaw #2021-TX-01.

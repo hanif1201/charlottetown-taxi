@@ -45,3 +45,57 @@ export function CloseIcon() {
     </svg>
   );
 }
+
+export function VisaLogo() {
+  return (
+    <svg viewBox="0 0 48 16" aria-hidden="true">
+      <text x="0" y="13" fontFamily="Arial, Helvetica, sans-serif" fontWeight={900} fontStyle="italic" fontSize={16} fill="#1A1F71" letterSpacing="-.5">
+        VISA
+      </text>
+    </svg>
+  );
+}
+
+export function MastercardLogo() {
+  return (
+    <svg viewBox="0 0 40 24" aria-hidden="true">
+      <circle cx="15" cy="12" r="12" fill="#EB001B" />
+      <circle cx="25" cy="12" r="12" fill="#F79E1B" />
+      <path d="M20 2.6a12 12 0 010 18.8 12 12 0 010-18.8z" fill="#FF5F00" />
+    </svg>
+  );
+}
+
+export function GooglePayLogo() {
+  return (
+    <svg viewBox="0 0 84 24" aria-hidden="true">
+      <text
+        x="0"
+        y="17"
+        fontFamily="Arial, Helvetica, sans-serif"
+        fontSize={16}
+        textLength="52"
+        lengthAdjust="spacingAndGlyphs"
+      >
+        <tspan fill="#4285F4">G</tspan>
+        <tspan fill="#EA4335">o</tspan>
+        <tspan fill="#FBBC05">o</tspan>
+        <tspan fill="#4285F4">g</tspan>
+        <tspan fill="#34A853">l</tspan>
+        <tspan fill="#EA4335">e</tspan>
+      </text>
+      <text
+        x="58"
+        y="17"
+        fontFamily="Arial, Helvetica, sans-serif"
+        fontWeight={500}
+        fontSize={16}
+        fill="#5F6368"
+        textLength="26"
+        lengthAdjust="spacingAndGlyphs"
+      >
+        Pay
+      </text>
+    </svg>
+  );
+}
