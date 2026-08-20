@@ -1,9 +1,10 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { PhoneIcon, SmsIcon, WhatsAppIcon } from '@/components/ui/Icon';
+import { PhoneIcon, SmsIcon, WhatsAppIcon, MenuIcon, CloseIcon } from '@/components/ui/Icon';
 
 // Real routes get aria-current highlighting; homepage-section anchors (below)
 // don't represent a single distinct "current page" so they're left unmarked.
@@ -37,6 +38,26 @@ export function Header() {
   // "/airport-transfer/" — normalize before comparing against the plain-path keys below.
   const pathname = rawPathname !== '/' ? rawPathname.replace(/\/$/, '') : rawPathname;
   const bookHref = LOCAL_BOOK_HASH[pathname] ?? '/#book';
+
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  // The mobile panel is the only way to reach the nav below the 1080px breakpoint
+  // where .primary hides, so give it the same escape hatches as the other
+  // dismissible panels on the site (FabBooking's quick-book panel).
+  useEffect(() => {
+    if (!mobileOpen) return;
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') setMobileOpen(false);
+    }
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [mobileOpen]);
+
+  // A route change (nav link clicked) should always close the panel behind it.
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMobileOpen(false);
+  }, [pathname]);
 
   return (
     <header className="main">
@@ -92,8 +113,30 @@ export function Header() {
           <a href={bookHref} className="btn btn-brass btn-sm">
             Book Now
           </a>
+          <button
+            type="button"
+            className="menu-toggle"
+            aria-expanded={mobileOpen}
+            aria-controls="mobileNav"
+            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            onClick={() => setMobileOpen((v) => !v)}
+          >
+            {mobileOpen ? <CloseIcon /> : <MenuIcon />}
+          </button>
         </div>
       </div>
+
+      <nav className="mobile-nav" id="mobileNav" aria-label="Primary" hidden={!mobileOpen}>
+        <ul>
+          {[...PAGE_LINKS, ...ANCHOR_LINKS].map((link) => (
+            <li key={link.href}>
+              <Link href={link.href} aria-current={pathname === link.href ? 'page' : undefined}>
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </header>
   );
 }

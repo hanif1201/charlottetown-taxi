@@ -88,6 +88,35 @@ nav.primary a[aria-current]::after{width:100%;}
 @media(max-width:1080px){nav.primary{display:none;}}
 @media(max-width:430px){.logo .lw{font-size:17px;}.logo img{height:31px;}}
 
+/* ---------- Mobile nav toggle ---------- */
+.menu-toggle{display:none;width:38px;height:38px;border-radius:50%;border:1px solid rgba(230,214,168,.22);align-items:center;justify-content:center;background:transparent;color:rgba(248,246,241,.8);cursor:pointer;transition:all .3s;flex-shrink:0;}
+.menu-toggle svg{width:19px;height:19px;}
+.menu-toggle:hover{border-color:var(--brass);background:rgba(201,162,39,.1);color:var(--brass);}
+@media(max-width:1080px){.menu-toggle{display:flex;}}
+@media(max-width:400px){.menu-toggle{width:34px;height:34px;}.menu-toggle svg{width:17px;height:17px;}}
+
+.mobile-nav{display:none;}
+.mobile-nav:not([hidden]){
+  display:block;
+  position:absolute;
+  top:100%;
+  left:0;
+  right:0;
+  background:var(--ink);
+  border-top:1px solid rgba(201,162,39,.24);
+  border-bottom:1px solid rgba(201,162,39,.24);
+  box-shadow:0 24px 48px rgba(0,0,0,.35);
+  max-height:calc(100vh - 64px);
+  overflow-y:auto;
+}
+.mobile-nav ul{padding:6px 0;}
+.mobile-nav li{border-bottom:1px solid rgba(230,214,168,.08);}
+.mobile-nav li:last-child{border-bottom:none;}
+.mobile-nav a{display:block;padding:16px 30px;color:rgba(248,246,241,.85);font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;font-weight:500;transition:color .2s,background .2s;}
+.mobile-nav a:hover{color:var(--ivory);background:rgba(230,214,168,.05);}
+.mobile-nav a[aria-current]{color:var(--brass);}
+@media(min-width:1081px){.mobile-nav{display:none!important;}}
+
 /* ---------- Buttons ---------- */
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 27px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;border:1px solid transparent;cursor:pointer;transition:transform .3s,background .3s,box-shadow .3s,color .3s,border-color .3s;font-family:var(--font-inter),sans-serif;white-space:nowrap;}
 .btn-brass{background:var(--brass);color:var(--ink);box-shadow:0 6px 22px rgba(201,162,39,.22);}
