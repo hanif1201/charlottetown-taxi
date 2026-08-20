@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { useBooking } from '@/components/booking/BookingProvider';
 import { ServiceKey } from '@/lib/services';
 
@@ -19,6 +20,11 @@ const FAB_SERVICES: [string, ServiceKey][] = [
 
 export function FabBooking() {
   const { dispatch } = useBooking();
+  // Lives in the root layout, which doesn't remount on client-side navigation —
+  // re-run on every route change so the FAB tracks the new page's own hero
+  // instead of an IntersectionObserver still watching the previous page's
+  // (by then detached) .hero-cine node.
+  const pathname = usePathname();
   const [armed, setArmed] = useState(false);
   const [open, setOpen] = useState(false);
   const [service, setService] = useState(FAB_SERVICES[0][0]);
@@ -40,7 +46,7 @@ export function FabBooking() {
     const io = new IntersectionObserver(([entry]) => setArmed(!entry.isIntersecting), { threshold: 0.12 });
     io.observe(hero);
     return () => io.disconnect();
-  }, []);
+  }, [pathname]);
 
   useEffect(() => {
     if (!open) return;
