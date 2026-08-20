@@ -141,7 +141,9 @@ export function CruiseBookingWizard() {
   }
 
   const showDurBlock = state.need === 'Private PEI shore transportation' || state.need === 'Custom island transportation';
-  const fieldClass = (id: string) => (invalid.has(id) ? 'invalid' : undefined);
+  // The class has to land on the .field wrapper, not the input — see globals.css's
+  // `.field.invalid` selectors.
+  const fieldWrapClass = (id: string) => `field${invalid.has(id) ? ' invalid' : ''}`;
 
   return (
     <section className="sec sec-tight stone" id="book" aria-labelledby="bookTitle">
@@ -259,7 +261,7 @@ export function CruiseBookingWizard() {
                     <p className="cs-sub">Fields marked * are required.</p>
 
                     <div className="frow">
-                      <div className="field">
+                      <div className={fieldWrapClass('ship')}>
                         <label htmlFor="ship">
                           Cruise ship <span className="rq">*</span>
                         </label>
@@ -268,7 +270,6 @@ export function CruiseBookingWizard() {
                           value={val('ship')}
                           onChange={(e) => setField('ship', e.target.value)}
                           onBlur={() => blurCheck('ship')}
-                          className={fieldClass('ship')}
                         >
                           <option value="">Select your ship</option>
                           {CRUISE_SHIPS.map((s) => (
@@ -285,7 +286,7 @@ export function CruiseBookingWizard() {
                     </div>
 
                     <div className="frow">
-                      <div className="field">
+                      <div className={fieldWrapClass('cArrive')}>
                         <label htmlFor="cArrive">
                           Arrival date in port <span className="rq">*</span>
                         </label>
@@ -296,11 +297,10 @@ export function CruiseBookingWizard() {
                           value={val('cArrive')}
                           onChange={(e) => setField('cArrive', e.target.value)}
                           onBlur={() => blurCheck('cArrive')}
-                          className={fieldClass('cArrive')}
                         />
                         <span className="err">Please choose your date in port.</span>
                       </div>
-                      <div className="field">
+                      <div className={fieldWrapClass('cPickup')}>
                         <label htmlFor="cPickup">
                           Desired pickup time <span className="rq">*</span>
                         </label>
@@ -310,7 +310,6 @@ export function CruiseBookingWizard() {
                           value={val('cPickup')}
                           onChange={(e) => setField('cPickup', e.target.value)}
                           onBlur={() => blurCheck('cPickup')}
-                          className={fieldClass('cPickup')}
                         />
                         <span className="err">Please choose a pickup time.</span>
                       </div>
@@ -377,7 +376,7 @@ export function CruiseBookingWizard() {
                     <div style={{ marginTop: 24 }}>
                       <span className="grouplab">Return to ship</span>
                       <div className="frow">
-                        <div className="field">
+                        <div className={fieldWrapClass('cBack')}>
                           <label htmlFor="cBack">
                             Requested port return time <span className="rq">*</span>
                           </label>
@@ -387,7 +386,6 @@ export function CruiseBookingWizard() {
                             value={val('cBack')}
                             onChange={(e) => setField('cBack', e.target.value)}
                             onBlur={() => blurCheck('cBack')}
-                            className={fieldClass('cBack')}
                           />
                           <span className="err">Please choose a return time.</span>
                         </div>
@@ -463,7 +461,7 @@ export function CruiseBookingWizard() {
                     {state.dir === 'Pickup from ferry' && (
                       <div className="cond show" style={{ marginTop: 22 }}>
                         <div className="frow">
-                          <div className="field">
+                          <div className={fieldWrapClass('fpDate')}>
                             <label htmlFor="fpDate">
                               Arrival date <span className="rq">*</span>
                             </label>
@@ -474,11 +472,10 @@ export function CruiseBookingWizard() {
                               value={val('fpDate')}
                               onChange={(e) => setField('fpDate', e.target.value)}
                               onBlur={() => blurCheck('fpDate')}
-                              className={fieldClass('fpDate')}
                             />
                             <span className="err">Please choose the arrival date.</span>
                           </div>
-                          <div className="field">
+                          <div className={fieldWrapClass('fpTime')}>
                             <label htmlFor="fpTime">
                               Ferry arrival time <span className="rq">*</span>
                             </label>
@@ -488,7 +485,6 @@ export function CruiseBookingWizard() {
                               value={val('fpTime')}
                               onChange={(e) => setField('fpTime', e.target.value)}
                               onBlur={() => blurCheck('fpTime')}
-                              className={fieldClass('fpTime')}
                             />
                             <span className="err">Please add the sailing arrival time.</span>
                           </div>
@@ -504,7 +500,7 @@ export function CruiseBookingWizard() {
                               onChange={(e) => setField('fpFrom', e.target.value)}
                             />
                           </div>
-                          <div className="field">
+                          <div className={fieldWrapClass('fpTo')}>
                             <label htmlFor="fpTo">
                               Destination in PEI <span className="rq">*</span>
                             </label>
@@ -515,7 +511,6 @@ export function CruiseBookingWizard() {
                               value={val('fpTo')}
                               onChange={(e) => setField('fpTo', e.target.value)}
                               onBlur={() => blurCheck('fpTo')}
-                              className={fieldClass('fpTo')}
                             />
                             <span className="err">Please tell us where you are going.</span>
                           </div>
@@ -525,7 +520,7 @@ export function CruiseBookingWizard() {
 
                     {state.dir === 'Drop-off at ferry' && (
                       <div className="cond show" style={{ marginTop: 22 }}>
-                        <div className="field">
+                        <div className={fieldWrapClass('fdFrom')}>
                           <label htmlFor="fdFrom">
                             Pickup address <span className="rq">*</span>
                           </label>
@@ -536,12 +531,11 @@ export function CruiseBookingWizard() {
                             value={val('fdFrom')}
                             onChange={(e) => setField('fdFrom', e.target.value)}
                             onBlur={() => blurCheck('fdFrom')}
-                            className={fieldClass('fdFrom')}
                           />
                           <span className="err">Please enter a pickup address.</span>
                         </div>
                         <div className="frow">
-                          <div className="field">
+                          <div className={fieldWrapClass('fdDate')}>
                             <label htmlFor="fdDate">
                               Travel date <span className="rq">*</span>
                             </label>
@@ -552,11 +546,10 @@ export function CruiseBookingWizard() {
                               value={val('fdDate')}
                               onChange={(e) => setField('fdDate', e.target.value)}
                               onBlur={() => blurCheck('fdDate')}
-                              className={fieldClass('fdDate')}
                             />
                             <span className="err">Please choose the travel date.</span>
                           </div>
-                          <div className="field">
+                          <div className={fieldWrapClass('fdTime')}>
                             <label htmlFor="fdTime">
                               Ferry departure time <span className="rq">*</span>
                             </label>
@@ -566,7 +559,6 @@ export function CruiseBookingWizard() {
                               value={val('fdTime')}
                               onChange={(e) => setField('fdTime', e.target.value)}
                               onBlur={() => blurCheck('fdTime')}
-                              className={fieldClass('fdTime')}
                             />
                             <span className="err">Please add your sailing time.</span>
                           </div>
@@ -625,7 +617,7 @@ export function CruiseBookingWizard() {
                     <h3>Passengers</h3>
                     <p className="cs-sub">So the right vehicle is assigned before the day.</p>
                     <div className="frow3">
-                      <div className="field">
+                      <div className={fieldWrapClass('adults')}>
                         <label htmlFor="adults">
                           Adults <span className="rq">*</span>
                         </label>
@@ -634,7 +626,6 @@ export function CruiseBookingWizard() {
                           value={val('adults')}
                           onChange={(e) => setField('adults', e.target.value)}
                           onBlur={() => blurCheck('adults')}
-                          className={fieldClass('adults')}
                         >
                           <option value="">Select</option>
                           {['1', '2', '3', '4', '5', '6', '7 or more'].map((n) => (
@@ -706,7 +697,7 @@ export function CruiseBookingWizard() {
                     <h3>Your contact details</h3>
                     <p className="cs-sub">We reply with confirmation and the pickup arrangement.</p>
                     <div className="frow">
-                      <div className="field">
+                      <div className={fieldWrapClass('name')}>
                         <label htmlFor="name">
                           Full name <span className="rq">*</span>
                         </label>
@@ -717,11 +708,10 @@ export function CruiseBookingWizard() {
                           value={val('name')}
                           onChange={(e) => setField('name', e.target.value)}
                           onBlur={() => blurCheck('name')}
-                          className={fieldClass('name')}
                         />
                         <span className="err">Please enter a name.</span>
                       </div>
-                      <div className="field">
+                      <div className={fieldWrapClass('email')}>
                         <label htmlFor="email">
                           Email <span className="rq">*</span>
                         </label>
@@ -732,13 +722,12 @@ export function CruiseBookingWizard() {
                           value={val('email')}
                           onChange={(e) => setField('email', e.target.value)}
                           onBlur={() => blurCheck('email')}
-                          className={fieldClass('email')}
                         />
                         <span className="err">Please check the email address.</span>
                       </div>
                     </div>
                     <div className="frow">
-                      <div className="field">
+                      <div className={fieldWrapClass('phone')}>
                         <label htmlFor="phone">
                           Phone or WhatsApp <span className="rq">*</span>
                         </label>
@@ -749,7 +738,6 @@ export function CruiseBookingWizard() {
                           value={val('phone')}
                           onChange={(e) => setField('phone', e.target.value)}
                           onBlur={() => blurCheck('phone')}
-                          className={fieldClass('phone')}
                         />
                         <span className="err">Please enter a number we can reach.</span>
                       </div>

@@ -150,7 +150,7 @@ export function BookingForm() {
         </div>
 
         <div className="frow">
-          <div className="field">
+          <div className={`field${invalid.has('when') ? ' invalid' : ''}`}>
             <label htmlFor="when">
               Pickup date &amp; time <span className="rq">*</span>
             </label>
@@ -161,7 +161,6 @@ export function BookingForm() {
               value={val('when')}
               onChange={(e) => setField('when', e.target.value)}
               onBlur={() => blurCheck('when')}
-              className={invalid.has('when') ? 'invalid' : undefined}
             />
             <div className="err">Please choose a valid future date and time.</div>
           </div>
@@ -182,7 +181,7 @@ export function BookingForm() {
           <div className="return-block show">
             <div className="rt">Return journey</div>
             <div className="frow">
-              <div className="field">
+              <div className={`field${invalid.has('retWhen') ? ' invalid' : ''}`}>
                 <label htmlFor="retWhen">
                   Return date &amp; time <span className="rq">*</span>
                 </label>
@@ -193,7 +192,6 @@ export function BookingForm() {
                   value={val('retWhen')}
                   onChange={(e) => setField('retWhen', e.target.value)}
                   onBlur={() => blurCheck('retWhen')}
-                  className={invalid.has('retWhen') ? 'invalid' : undefined}
                 />
                 <div className="err">Please choose a return date and time.</div>
               </div>
@@ -230,7 +228,7 @@ export function BookingForm() {
           <span className="shint">So we send the right vehicle</span>
         </div>
         <div className="frow3">
-          <div className="field">
+          <div className={`field${invalid.has('pax') ? ' invalid' : ''}`}>
             <label htmlFor="pax">
               Passengers <span className="rq">*</span>
             </label>
@@ -239,7 +237,6 @@ export function BookingForm() {
               value={val('pax')}
               onChange={(e) => setField('pax', e.target.value)}
               onBlur={() => blurCheck('pax')}
-              className={invalid.has('pax') ? 'invalid' : undefined}
             >
               <option value="">Select</option>
               {['1', '2', '3', '4', '5', '6', '7', '8+'].map((n) => (
@@ -319,7 +316,7 @@ export function BookingForm() {
           <span className="shint">How dispatch reaches you</span>
         </div>
         <div className="frow">
-          <div className="field">
+          <div className={`field${invalid.has('name') ? ' invalid' : ''}`}>
             <label htmlFor="name">
               Full name <span className="rq">*</span>
             </label>
@@ -330,11 +327,10 @@ export function BookingForm() {
               value={val('name')}
               onChange={(e) => setField('name', e.target.value)}
               onBlur={() => blurCheck('name')}
-              className={invalid.has('name') ? 'invalid' : undefined}
             />
             <div className="err">Please enter your name.</div>
           </div>
-          <div className="field">
+          <div className={`field${invalid.has('phone') ? ' invalid' : ''}`}>
             <label htmlFor="phone">
               Phone <span className="rq">*</span>
             </label>
@@ -346,13 +342,12 @@ export function BookingForm() {
               value={val('phone')}
               onChange={(e) => setField('phone', e.target.value)}
               onBlur={() => blurCheck('phone')}
-              className={invalid.has('phone') ? 'invalid' : undefined}
             />
             <div className="err">Please enter a valid phone number.</div>
           </div>
         </div>
         <div className="frow">
-          <div className="field">
+          <div className={`field${invalid.has('email') ? ' invalid' : ''}`}>
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -361,7 +356,6 @@ export function BookingForm() {
               value={val('email')}
               onChange={(e) => setField('email', e.target.value)}
               onBlur={() => blurCheck('email')}
-              className={invalid.has('email') ? 'invalid' : undefined}
             />
             <div className="err">Please enter a valid email address.</div>
           </div>

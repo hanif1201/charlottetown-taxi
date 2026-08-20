@@ -26,11 +26,20 @@ function suggestionText(flightTime: string, flightType: string): string | null {
   return `Suggested pickup: ${pretty} — ${leadMinutes} minutes at the terminal plus travel time. Adjust above if you prefer.`;
 }
 
-export function AirportBookingFields() {
+interface AirportBookingFieldsProps {
+  invalid: Set<string>;
+  blurCheck: (id: string) => void;
+}
+
+export function AirportBookingFields({ invalid, blurCheck }: AirportBookingFieldsProps) {
   const { state, dispatch, val, setField } = useField();
   const [arrivalReturnOpen, setArrivalReturnOpen] = useState(false);
   const [departureReturnOpen, setDepartureReturnOpen] = useState(false);
   const [minDT, setMinDT] = useState('');
+
+  // The parent (AirportBookingSection) owns the shared `invalid` Set — the class has
+  // to land on this .field wrapper, matching globals.css's `.field.invalid` selectors.
+  const fieldWrapClass = (id: string) => `field${invalid.has(id) ? ' invalid' : ''}`;
 
   useEffect(() => {
     // Computed post-mount so server and client markup match; see BookingForm's identical pattern.
@@ -88,7 +97,7 @@ export function AirportBookingFields() {
             with it, so a delay doesn&rsquo;t need a phone call.
           </div>
           <div className="frow3">
-            <div className="field">
+            <div className={fieldWrapClass('flight')}>
               <label htmlFor="flight">
                 Flight number <span className="rq">*</span>
               </label>
@@ -98,6 +107,7 @@ export function AirportBookingFields() {
                 placeholder="e.g. AC8514"
                 value={val('flight')}
                 onChange={(e) => setField('flight', e.target.value)}
+                onBlur={() => blurCheck('flight')}
               />
               <div className="err">Flight number lets us track delays.</div>
             </div>
@@ -123,7 +133,7 @@ export function AirportBookingFields() {
             </div>
           </div>
           <div className="frow">
-            <div className="field">
+            <div className={fieldWrapClass('when')}>
               <label htmlFor="when">
                 Scheduled landing <span className="rq">*</span>
               </label>
@@ -133,10 +143,11 @@ export function AirportBookingFields() {
                 min={minDT}
                 value={val('when')}
                 onChange={(e) => setField('when', e.target.value)}
+                onBlur={() => blurCheck('when')}
               />
               <div className="err">Please enter your scheduled landing time.</div>
             </div>
-            <div className="field">
+            <div className={fieldWrapClass('dropoff')}>
               <label htmlFor="dropoff">
                 Drop-off address <span className="rq">*</span>
               </label>
@@ -146,6 +157,7 @@ export function AirportBookingFields() {
                 placeholder="Hotel, home, venue or town"
                 value={val('dropoff')}
                 onChange={(e) => setField('dropoff', e.target.value)}
+                onBlur={() => blurCheck('dropoff')}
               />
               <div className="err">Please enter where you&rsquo;re heading.</div>
             </div>
@@ -226,7 +238,7 @@ export function AirportBookingFields() {
             international.
           </div>
           <div className="frow3">
-            <div className="field">
+            <div className={fieldWrapClass('flight')}>
               <label htmlFor="flight">
                 Flight number <span className="rq">*</span>
               </label>
@@ -236,6 +248,7 @@ export function AirportBookingFields() {
                 placeholder="e.g. AC8515"
                 value={val('flight')}
                 onChange={(e) => setField('flight', e.target.value)}
+                onBlur={() => blurCheck('flight')}
               />
               <div className="err">Please enter your flight number.</div>
             </div>
@@ -276,7 +289,7 @@ export function AirportBookingFields() {
               />
               <div className="err">Please enter your departure time.</div>
             </div>
-            <div className="field">
+            <div className={fieldWrapClass('pickup')}>
               <label htmlFor="pickup">
                 Pickup address <span className="rq">*</span>
               </label>
@@ -286,12 +299,13 @@ export function AirportBookingFields() {
                 placeholder="Hotel, home or venue"
                 value={val('pickup')}
                 onChange={(e) => setField('pickup', e.target.value)}
+                onBlur={() => blurCheck('pickup')}
               />
               <div className="err">Please enter your pickup address.</div>
             </div>
           </div>
           <div className="frow">
-            <div className="field">
+            <div className={fieldWrapClass('when')}>
               <label htmlFor="when">Preferred pickup time</label>
               <input
                 type="datetime-local"
@@ -299,6 +313,7 @@ export function AirportBookingFields() {
                 min={minDT}
                 value={val('when')}
                 onChange={(e) => setField('when', e.target.value)}
+                onBlur={() => blurCheck('when')}
               />
               <div className="err">Please choose a valid future time.</div>
             </div>

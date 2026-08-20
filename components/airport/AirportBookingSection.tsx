@@ -83,10 +83,10 @@ export function AirportBookingSection() {
         </div>
         <div className="booking">
           <form className="bform reveal" ref={formRef} noValidate onSubmit={handleSubmit}>
-            <AirportBookingFields />
+            <AirportBookingFields invalid={invalid} blurCheck={blurCheck} />
 
             <div className="frow3">
-              <div className="field">
+              <div className={`field${invalid.has('pax') ? ' invalid' : ''}`}>
                 <label htmlFor="pax">
                   Passengers <span className="rq">*</span>
                 </label>
@@ -95,7 +95,6 @@ export function AirportBookingSection() {
                   value={val('pax')}
                   onChange={(e) => setField('pax', e.target.value)}
                   onBlur={() => blurCheck('pax')}
-                  className={invalid.has('pax') ? 'invalid' : undefined}
                 >
                   <option value="">Select</option>
                   {['1', '2', '3', '4', '5', '6', '7+'].map((n) => (
@@ -139,7 +138,7 @@ export function AirportBookingSection() {
                   <option>Other — noted below</option>
                 </select>
               </div>
-              <div className="field">
+              <div className={`field${invalid.has('payment') ? ' invalid' : ''}`}>
                 <label htmlFor="payment">
                   Payment method <span className="rq">*</span>
                 </label>
@@ -148,7 +147,6 @@ export function AirportBookingSection() {
                   value={val('payment')}
                   onChange={(e) => setField('payment', e.target.value)}
                   onBlur={() => blurCheck('payment')}
-                  className={invalid.has('payment') ? 'invalid' : undefined}
                 >
                   <option value="">Select</option>
                   <option>Cash</option>
@@ -174,7 +172,7 @@ export function AirportBookingSection() {
             </div>
 
             <div className="frow">
-              <div className="field">
+              <div className={`field${invalid.has('name') ? ' invalid' : ''}`}>
                 <label htmlFor="name">
                   Full name <span className="rq">*</span>
                 </label>
@@ -185,11 +183,10 @@ export function AirportBookingSection() {
                   value={val('name')}
                   onChange={(e) => setField('name', e.target.value)}
                   onBlur={() => blurCheck('name')}
-                  className={invalid.has('name') ? 'invalid' : undefined}
                 />
                 <div className="err">Please enter your name.</div>
               </div>
-              <div className="field">
+              <div className={`field${invalid.has('phone') ? ' invalid' : ''}`}>
                 <label htmlFor="phone">
                   Phone <span className="rq">*</span>
                 </label>
@@ -201,14 +198,13 @@ export function AirportBookingSection() {
                   value={val('phone')}
                   onChange={(e) => setField('phone', e.target.value)}
                   onBlur={() => blurCheck('phone')}
-                  className={invalid.has('phone') ? 'invalid' : undefined}
                 />
                 <div className="err">Please enter a valid phone number.</div>
               </div>
             </div>
 
             <div className="frow">
-              <div className="field">
+              <div className={`field${invalid.has('email') ? ' invalid' : ''}`}>
                 <label htmlFor="email">
                   Email <span className="rq">*</span>
                 </label>
@@ -219,7 +215,6 @@ export function AirportBookingSection() {
                   value={val('email')}
                   onChange={(e) => setField('email', e.target.value)}
                   onBlur={() => blurCheck('email')}
-                  className={invalid.has('email') ? 'invalid' : undefined}
                 />
                 <div className="err">Please enter a valid email address.</div>
               </div>
