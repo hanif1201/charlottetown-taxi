@@ -117,7 +117,7 @@ export function BookingForm() {
         <ServiceTopFields />
 
         <div className="frow">
-          <div className="field">
+          <div className={`field${invalid.has('pickup') ? ' invalid' : ''}`}>
             <label htmlFor="pickup">
               Pickup address <span className="rq">*</span>
             </label>
@@ -128,12 +128,11 @@ export function BookingForm() {
               value={val('pickup')}
               onChange={(e) => setField('pickup', e.target.value)}
               onBlur={() => blurCheck('pickup')}
-              className={invalid.has('pickup') ? 'invalid' : undefined}
             />
             <div className="err">Please enter a pickup location.</div>
           </div>
           {showDropoff && (
-            <div className="field">
+            <div className={`field${invalid.has('dropoff') ? ' invalid' : ''}`}>
               <label htmlFor="dropoff">
                 Drop-off address <span className="rq">*</span>
               </label>
@@ -144,7 +143,6 @@ export function BookingForm() {
                 value={val('dropoff')}
                 onChange={(e) => setField('dropoff', e.target.value)}
                 onBlur={() => blurCheck('dropoff')}
-                className={invalid.has('dropoff') ? 'invalid' : undefined}
               />
               <div className="err">Please enter a drop-off location.</div>
             </div>
