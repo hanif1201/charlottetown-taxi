@@ -7,7 +7,6 @@ import { BookingSection } from '@/components/booking/BookingSection';
 import { Coverage } from '@/components/sections/Coverage';
 import { Reviews } from '@/components/sections/Reviews';
 import { Faq } from '@/components/sections/Faq';
-import { FinalCta } from '@/components/sections/FinalCta';
 
 export default function Home() {
   return (
@@ -21,7 +20,6 @@ export default function Home() {
       <Coverage />
       <Reviews />
       <Faq />
-      <FinalCta />
     </main>
   );
 }

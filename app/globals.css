@@ -15,6 +15,15 @@
   --airport-img:url('/images/airport.jpeg');
   --fleet-img:url('/images/fleet.jpg');
   --tour-img:url('/images/tour.jpg');
+  --golf-img:url('/images/golf.jpg');
+  --cruise-img:url('/images/cruise.jpg');
+  --corporate-img:url('/images/corporate.jpg');
+  --wedding-img:url('/images/wedding.jpg');
+  --hourly-img:url('/images/hourly.jpg');
+  --medical-img:url('/images/medical.jpg');
+  --executive-img:url('/images/executive.jpg');
+  --fleet-suv-img:url('/images/fleet-suv.jpg');
+  --fleet-van-img:url('/images/fleet-van.jpg');
 
   /* base */
   --ink:#0B1622;          /* midnight navy-black — page base */
@@ -328,18 +337,17 @@ textarea{resize:vertical;}
 .aside-btns{display:flex;gap:9px;margin-top:17px;flex-wrap:wrap;}
 
 /* ---------- Fleet ---------- */
-.fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.fleet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
 .veh{border:1px solid var(--stone-line);border-radius:var(--radius);overflow:hidden;background:var(--ivory);transition:transform .4s,box-shadow .4s;}
 .veh:hover{transform:translateY(-5px);box-shadow:0 20px 46px rgba(11,22,34,.13);}
-.veh .vimg{height:168px;background-size:cover;background-position:center;background-color:var(--stone);}
+.veh .vimg{height:230px;background-size:contain;background-repeat:no-repeat;background-position:center;background-color:var(--stone);}
 .vimg-sedan{background-image:var(--sedan-img);}
-.vimg-suv{background-image:var(--suv-img);}
-.vimg-van{background-image:var(--fleet-img);}
-.vimg-group{background-image:var(--hero-img);}
+.vimg-suv{background-image:var(--fleet-suv-img);}
+.vimg-van{background-image:var(--fleet-van-img);}
 .veh .vbody{padding:23px 21px;}
 .veh h3{font-size:22px;color:var(--ink);font-weight:600;}
 .vtag{font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--brass-dk);font-weight:700;margin-top:6px;}
-.vspecs{display:flex;gap:20px;margin-top:16px;padding-top:14px;border-top:1px solid var(--stone-line);}
+.vspecs{display:flex;gap:16px;margin-top:16px;padding-top:14px;border-top:1px solid var(--stone-line);}
 .vspecs div{font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;}
 .vspecs strong{display:block;font-family:var(--font-cormorant),serif;font-size:22px;color:var(--ink);font-weight:600;letter-spacing:0;text-transform:none;}
 @media(max-width:1000px){.fleet-grid{grid-template-columns:repeat(2,1fr);}}
@@ -396,7 +404,6 @@ textarea{resize:vertical;}
 @media(max-width:840px){.faq-cols{grid-template-columns:1fr;}}
 
 /* ---------- Final CTA ---------- */
-.final-wrap{padding-top:0;}
 .final{position:relative;overflow:hidden;text-align:center;padding:106px 30px;border-radius:var(--radius);color:var(--ivory);background-image:linear-gradient(rgba(11,22,34,.9),rgba(11,22,34,.95)),var(--fleet-img);background-size:cover;background-position:center;}
 .final::before{content:'';position:absolute;inset:0;background:radial-gradient(58% 58% at 50% 0%,rgba(201,162,39,.18),transparent 70%);}
 .final > *{position:relative;}
@@ -472,6 +479,13 @@ footer{background:var(--ink);color:rgba(248,246,241,.58);padding-top:78px;border
 .simg-suv{background-image:var(--suv-img);}
 .simg-airport{background-image:var(--airport-img);}
 .simg-tour{background-image:var(--tour-img);}
+.simg-golf{background-image:var(--golf-img);background-position:center 38%;}
+.simg-cruise{background-image:var(--cruise-img);background-position:72% 45%;}
+.simg-corporate{background-image:var(--corporate-img);background-position:center 42%;}
+.simg-wedding{background-image:var(--wedding-img);background-position:center 40%;}
+.simg-hourly{background-image:var(--hourly-img);background-position:75% 40%;}
+.simg-medical{background-image:var(--medical-img);background-position:center 42%;}
+.simg-executive{background-image:var(--executive-img);background-position:center 45%;}
 .svc-photo::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,22,34,.15) 26%,rgba(11,22,34,.94) 100%);transition:background .4s;}
 .svc-photo:hover .simg{transform:scale(1.06);}
 .svc-photo:hover::after{background:linear-gradient(180deg,rgba(11,22,34,.28) 16%,rgba(11,22,34,.96) 100%);}

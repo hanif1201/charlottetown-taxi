@@ -72,20 +72,12 @@ export function Services() {
             </div>
           </article>
 
-          <article className="svc svc-icon">
-            <svg
-              className="sic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.2}
-              aria-hidden="true"
-            >
-              <path d="M2 18h20" />
-              <path d="M4 18V9l8-4 8 4v9" />
-              <path d="M9 18v-5h6v5" />
-              <path d="M2 21h20" />
-            </svg>
+          <article className="svc svc-photo">
+            <div
+              className="simg simg-cruise"
+              role="img"
+              aria-label="Northumberland Ferries vessel docked at Wood Islands, Prince Edward Island"
+            />
             <div className="sbody">
               <h3>Charlottetown Cruise Port Transfers</h3>
               <p>
@@ -98,19 +90,12 @@ export function Services() {
             </div>
           </article>
 
-          <article className="svc svc-icon">
-            <svg
-              className="sic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.2}
-              aria-hidden="true"
-            >
-              <path d="M11 21V4l7 3-7 3" />
-              <circle cx={8} cy={19} r={2.5} />
-              <path d="M11 19h8" />
-            </svg>
+          <article className="svc svc-photo">
+            <div
+              className="simg simg-golf"
+              role="img"
+              aria-label="Golfer teeing off on a Prince Edward Island coastal golf course"
+            />
             <div className="sbody">
               <h3>PEI Golf Course Transportation</h3>
               <p>
@@ -123,19 +108,12 @@ export function Services() {
             </div>
           </article>
 
-          <article className="svc svc-icon">
-            <svg
-              className="sic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.2}
-              aria-hidden="true"
-            >
-              <rect x={3} y={7} width={18} height={13} rx={1.5} />
-              <path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2" />
-              <path d="M3 12h18" />
-            </svg>
+          <article className="svc svc-photo">
+            <div
+              className="simg simg-corporate"
+              role="img"
+              aria-label="A chauffeur holding the door of a black executive SUV for two business travellers arriving at a hotel entrance"
+            />
             <div className="sbody">
               <h3>Corporate Travel</h3>
               <p>
@@ -148,17 +126,12 @@ export function Services() {
             </div>
           </article>
 
-          <article className="svc svc-icon">
-            <svg
-              className="sic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.2}
-              aria-hidden="true"
-            >
-              <path d="M12 21c-4-3.5-7-6.3-7-9.6A4.4 4.4 0 0112 8a4.4 4.4 0 017 3.4c0 3.3-3 6.1-7 9.6z" />
-            </svg>
+          <article className="svc svc-photo">
+            <div
+              className="simg simg-wedding"
+              role="img"
+              aria-label="A bride and groom walking arm in arm outside a barn wedding venue on Prince Edward Island"
+            />
             <div className="sbody">
               <h3>Wedding Transportation</h3>
               <p>
@@ -171,18 +144,12 @@ export function Services() {
             </div>
           </article>
 
-          <article className="svc svc-icon">
-            <svg
-              className="sic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.2}
-              aria-hidden="true"
-            >
-              <circle cx={12} cy={12} r={9} />
-              <path d="M12 7v5l3.5 2" />
-            </svg>
+          <article className="svc svc-photo">
+            <div
+              className="simg simg-hourly"
+              role="img"
+              aria-label="A Charlottetown Taxi driver checking his phone beside a branded vehicle outside a waterfront hotel"
+            />
             <div className="sbody">
               <h3>Hourly Chauffeur</h3>
               <p>
@@ -195,17 +162,12 @@ export function Services() {
             </div>
           </article>
 
-          <article className="svc svc-icon">
-            <svg
-              className="sic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.2}
-              aria-hidden="true"
-            >
-              <path d="M4 12h4l2-5 4 10 2-5h4" />
-            </svg>
+          <article className="svc svc-photo">
+            <div
+              className="simg simg-medical"
+              role="img"
+              aria-label="A driver assisting an elderly passenger with a cane to a vehicle outside a medical facility"
+            />
             <div className="sbody">
               <h3>Medical &amp; Long-Distance Transport, PEI</h3>
               <p>
@@ -218,18 +180,12 @@ export function Services() {
             </div>
           </article>
 
-          <article className="svc svc-icon">
-            <svg
-              className="sic"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.2}
-              aria-hidden="true"
-            >
-              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
-              <path d="M9.2 12.1l1.9 1.9 3.7-3.8" />
-            </svg>
+          <article className="svc svc-photo">
+            <div
+              className="simg simg-executive"
+              role="img"
+              aria-label="Two business travellers reviewing an itinerary with their driver beside an executive SUV at a marina"
+            />
             <div className="sbody">
               <h3>Executive Transfers</h3>
               <p>

@@ -18,13 +18,16 @@ export function Fleet() {
             />
             <div className="vbody">
               <h3>Sedan</h3>
-              <div className="vtag">Everyday city rides</div>
+              <div className="vtag">Comfortable city &amp; airport rides</div>
               <div className="vspecs">
                 <div>
-                  <strong>3</strong>Seats
+                  <strong>4</strong>Passengers
                 </div>
                 <div>
-                  <strong>3</strong>Bags
+                  <strong>2</strong>Large bags
+                </div>
+                <div>
+                  <strong>2</strong>Carry-on
                 </div>
               </div>
             </div>
@@ -33,17 +36,20 @@ export function Fleet() {
             <div
               className="vimg vimg-suv"
               role="img"
-              aria-label="Charlottetown Taxi executive SUV for PEI travel with extra luggage"
+              aria-label="Charlottetown Taxi branded Ford Bronco Sport SUV parked at Charlottetown Airport arrivals"
             />
             <div className="vbody">
               <h3>SUV</h3>
-              <div className="vtag">Extra space &amp; winter roads</div>
+              <div className="vtag">Extra comfort &amp; luggage space</div>
               <div className="vspecs">
                 <div>
-                  <strong>4</strong>Seats
+                  <strong>4</strong>Passengers
                 </div>
                 <div>
-                  <strong>4</strong>Bags
+                  <strong>3</strong>Large bags
+                </div>
+                <div>
+                  <strong>2</strong>Carry-on
                 </div>
               </div>
             </div>
@@ -52,36 +58,20 @@ export function Fleet() {
             <div
               className="vimg vimg-van"
               role="img"
-              aria-label="Minivan taxi for families and group travel in Charlottetown"
+              aria-label="Charlottetown Taxi branded passenger van for families and small groups"
             />
             <div className="vbody">
-              <h3>Minivan</h3>
-              <div className="vtag">Families &amp; groups</div>
+              <h3>Passenger Van</h3>
+              <div className="vtag">Families &amp; small groups</div>
               <div className="vspecs">
                 <div>
-                  <strong>6</strong>Seats
+                  <strong>6-7</strong>Passengers
                 </div>
                 <div>
-                  <strong>6+</strong>Bags
-                </div>
-              </div>
-            </div>
-          </article>
-          <article className="veh">
-            <div
-              className="vimg vimg-group"
-              role="img"
-              aria-label="Multiple Charlottetown Taxi vehicles for group transport across PEI"
-            />
-            <div className="vbody">
-              <h3>Group Transport</h3>
-              <div className="vtag">Multiple vehicles</div>
-              <div className="vspecs">
-                <div>
-                  <strong>7+</strong>Seats
+                  <strong>4</strong>Large bags
                 </div>
                 <div>
-                  <strong>Any</strong>Bags
+                  <strong>2</strong>Carry-on
                 </div>
               </div>
             </div>

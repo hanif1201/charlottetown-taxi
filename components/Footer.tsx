@@ -9,8 +9,9 @@ export function Footer() {
         <div className="foot-top">
           <div className="foot-brand">
             <p className="fabout">
-              Prince Edward Island&apos;s licensed 24-hour taxi and private transportation service.
-              Charlottetown based, Island-wide, and answering the phone at 3am since 2016.
+              Licensed 24/7 taxi and private transportation across Prince Edward Island. Based in
+              Charlottetown and available for local rides, airport transfers, tours and
+              long-distance transportation.
             </p>
             <div className="fbtns">
               <a href="tel:+17823777533" className="btn btn-brass btn-sm">
