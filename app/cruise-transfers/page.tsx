@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: 'Charlottetown Cruise & Ferry Transportation | PEI Port Transfers',
   description:
     'Pre-arranged transportation for Port Charlottetown cruise passengers and Wood Islands and Souris ferry travellers — private PEI shore transportation, terminal pickups and drop-offs.',
-  alternates: { canonical: SITE_IS_LIVE ? '/cruise-ferry-transportation/' : undefined },
+  alternates: { canonical: SITE_IS_LIVE ? '/cruise-transfers/' : undefined },
   robots: SITE_IS_LIVE ? { index: true, follow: true } : { index: false, follow: false },
 };
 

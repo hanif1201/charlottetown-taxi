@@ -84,9 +84,9 @@ export function Services() {
                 Cruise ship transportation in PEI — Charlottetown Cruise Port, Wood Islands Ferry and
                 CTMA Souris, timed to docking and all-aboard.
               </p>
-              <a className="go" href="#book">
+              <Link className="go" href="/cruise-transfers/">
                 Cruise port transfers →
-              </a>
+              </Link>
             </div>
           </article>
 
@@ -121,7 +121,7 @@ export function Services() {
                 billed monthly, or booked one-off with a fixed price agreed in advance.
               </p>
               <div className="go-row">
-                <Link className="go" href="/corporate-transportation/">
+                <Link className="go" href="/corporate-travel/">
                   Corporate accounts →
                 </Link>
                 <a className="go" href="#book">

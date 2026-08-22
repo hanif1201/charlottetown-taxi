@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'Corporate Transportation Charlottetown | Business Travel PEI',
   description:
     'Corporate transportation across Prince Edward Island — executive and client travel, airport pickups for staff and guests, conference and group movement, with pre-arranged accounts.',
-  alternates: { canonical: SITE_IS_LIVE ? '/corporate-transportation/' : undefined },
+  alternates: { canonical: SITE_IS_LIVE ? '/corporate-travel/' : undefined },
   robots: SITE_IS_LIVE ? { index: true, follow: true } : { index: false, follow: false },
 };
 

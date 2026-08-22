@@ -10,8 +10,8 @@ import { PhoneIcon, SmsIcon, WhatsAppIcon, MenuIcon, CloseIcon } from '@/compone
 // don't represent a single distinct "current page" so they're left unmarked.
 const PAGE_LINKS: { href: string; label: string }[] = [
   { href: '/airport-transfer', label: 'Airport' },
-  { href: '/cruise-ferry-transportation', label: 'Cruise/Ferry' },
-  { href: '/corporate-transportation', label: 'Corporate' },
+  { href: '/cruise-transfers', label: 'Cruise/Ferry' },
+  { href: '/corporate-travel', label: 'Corporate' },
 ];
 
 const ANCHOR_LINKS: { href: string; label: string }[] = [
@@ -28,8 +28,8 @@ const ANCHOR_LINKS: { href: string; label: string }[] = [
 const LOCAL_BOOK_HASH: Record<string, string> = {
   '/': '#book',
   '/airport-transfer': '#book',
-  '/cruise-ferry-transportation': '#book',
-  '/corporate-transportation': '#request',
+  '/cruise-transfers': '#book',
+  '/corporate-travel': '#request',
 };
 
 export function Header() {
