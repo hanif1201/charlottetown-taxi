@@ -115,14 +115,19 @@ export function Services() {
               aria-label="A chauffeur holding the door of a black executive SUV for two business travellers arriving at a hotel entrance"
             />
             <div className="sbody">
-              <h3>Corporate Travel</h3>
+              <h3>Corporate &amp; Executive Travel</h3>
               <p>
-                Corporate transportation in PEI — executive travel for visiting teams and clients,
-                business accounts and monthly invoicing.
+                Executive sedans and SUVs for business accounts, visiting teams and client travel —
+                billed monthly, or booked one-off with a fixed price agreed in advance.
               </p>
-              <a className="go" href="#book">
-                Corporate transport PEI →
-              </a>
+              <div className="go-row">
+                <Link className="go" href="/corporate-transportation/">
+                  Corporate accounts →
+                </Link>
+                <a className="go" href="#book">
+                  Request a quote →
+                </a>
+              </div>
             </div>
           </article>
 
@@ -151,49 +156,13 @@ export function Services() {
               aria-label="A Charlottetown Taxi driver checking his phone beside a branded vehicle outside a waterfront hotel"
             />
             <div className="sbody">
-              <h3>Hourly Chauffeur</h3>
+              <h3>Hourly &amp; Long-Distance Chauffeur</h3>
               <p>
-                Hourly chauffeur hire in Charlottetown — a vehicle and driver held for the hours you
-                book, with unlimited stops and wait time included.
+                A vehicle and driver held by the hour for local stops, or booked for long-distance
+                and off-Island travel — quoted upfront with no meter running.
               </p>
               <a className="go" href="#book">
-                Hourly chauffeur →
-              </a>
-            </div>
-          </article>
-
-          <article className="svc svc-photo">
-            <div
-              className="simg simg-medical"
-              role="img"
-              aria-label="A driver assisting an elderly passenger with a cane to a vehicle outside a medical facility"
-            />
-            <div className="sbody">
-              <h3>Medical &amp; Long-Distance Transport, PEI</h3>
-              <p>
-                Medical appointment transportation across PEI and long-distance travel off-Island,
-                quoted upfront with no meter running.
-              </p>
-              <a className="go" href="#book">
-                Medical &amp; long distance →
-              </a>
-            </div>
-          </article>
-
-          <article className="svc svc-photo">
-            <div
-              className="simg simg-executive"
-              role="img"
-              aria-label="Two business travellers reviewing an itinerary with their driver beside an executive SUV at a marina"
-            />
-            <div className="sbody">
-              <h3>Executive Transfers</h3>
-              <p>
-                An executive sedan or SUV, a chauffeur briefed on your schedule, and a fixed price
-                agreed in advance — for business travel, client collections and wedding parties.
-              </p>
-              <a className="go" href="#book">
-                Request a quote →
+                Hourly &amp; long distance →
               </a>
             </div>
           </article>
