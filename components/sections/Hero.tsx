@@ -17,25 +17,26 @@ export function Hero() {
       <div className="wrap hc-inner">
         <p className="kicker fade" style={delayVar('.05s')}>
           <span className="kick-rule" aria-hidden="true" />
-          Locally owned · Licensed &amp; insured · Prince Edward Island
+          Local, Licensed &amp; Available 24/7
         </p>
 
         <h1 id="heroTitle" className="fade" style={delayVar('.15s')}>
-          Charlottetown Taxi <em>— 24/7 Taxi &amp; YYG Airport Transfers Across PEI</em>
+          24/7 Charlottetown Taxi <em>&amp; YYG Airport Transfers</em>
         </h1>
 
         <p className="hc-lede fade" style={delayVar('.28s')}>
-          Locally owned, licensed and running around the clock. Zone fares set by City bylaw from
-          $8.50, airport transfers from $20, and dispatch that answers whatever the hour.
+          Pre-book local rides, airport pickups, long-distance trips and private transportation
+          anywhere on Prince Edward Island.
         </p>
 
         <p className="hc-line fade" style={delayVar('.44s')}>
-          Every road on this Island, and someone who knows them all.
+          Every booking personally confirmed. Every vehicle matched to your passengers, luggage
+          and schedule.
         </p>
 
         <div className="hc-actions fade" style={delayVar('.54s')}>
           <a href="#book" className="btn btn-brass hc-primary">
-            Reserve Your Ride
+            Book a Taxi
           </a>
           <div className="contact-trio" role="group" aria-label="Contact dispatch">
             <a href="tel:+17823777533" className="ct ct-call">
@@ -56,11 +57,9 @@ export function Hero() {
 
         <ul className="hc-trust fade" style={delayVar('.72s')}>
           <li>BBB Accredited</li>
-          <li>Licensed &amp; Insured</li>
-          <li>Rated 5 Stars on Google</li>
-          <li>24/7 Dispatch</li>
-          <li>Local PEI Company</li>
-          <li>Proudly Serving Prince Edward Island</li>
+          <li>TIAPEI Member</li>
+          <li>Licensed &amp; Commercially Insured</li>
+          <li>24/7 Call &amp; Text Dispatch</li>
         </ul>
       </div>
 

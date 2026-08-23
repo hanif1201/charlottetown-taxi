@@ -14,8 +14,8 @@ export function Coverage() {
               fontWeight: 400,
             }}
           >
-            Taxi Service Across{' '}
-            <em style={{ fontStyle: 'italic', color: 'var(--champagne)' }}>All of Prince Edward Island</em>
+            Taxi Service Across Charlottetown{' '}
+            <em style={{ fontStyle: 'italic', color: 'var(--champagne)' }}>&amp; Prince Edward Island</em>
           </h2>
           <p
             style={{
@@ -48,7 +48,7 @@ export function Coverage() {
             </div>
             <div className="dest">
               <h3>Charlottetown Airport (YYG)</h3>
-              <p>Six kilometres from downtown, with flight-monitored pickups around the clock.</p>
+              <p>8 km from downtown, with flight-monitored pickups around the clock.</p>
             </div>
             <div className="dest">
               <h3>Charlottetown Cruise Port</h3>

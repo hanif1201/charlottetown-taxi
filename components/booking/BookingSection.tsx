@@ -14,9 +14,12 @@ export function BookingSection() {
         <div className="head reveal center">
           <span className="eyebrow eyebrow-dk">Reserve Your Ride</span>
           <h2>
-            Book a Taxi in Charlottetown — <em>online, confirmed by a person</em>
+            Book a Charlottetown Taxi <em>Online</em>
           </h2>
-          <p>Choose your service and the form adapts to collect exactly what we need — nothing more.</p>
+          <p>
+            Request your ride in under a minute. Dispatch confirms the vehicle, pickup time and
+            fare by your chosen contact method.
+          </p>
         </div>
 
         <div className="picker reveal" role="tablist" aria-label="Select a service">

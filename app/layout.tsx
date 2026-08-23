@@ -24,9 +24,9 @@ const inter = Inter({
   display: 'swap',
 });
 
-const TITLE = 'Charlottetown Taxi | 24/7 PEI Taxi & YYG Airport Transfers';
+const TITLE = 'Charlottetown Taxi | 24/7 Service & YYG Airport Transfers';
 const DESCRIPTION =
-  "Charlottetown's locally owned taxi service, 24/7 across PEI. Regulated zone fares from $8.50, YYG airport transfers from $20, Island-wide travel at $2/km. No surge pricing, card accepted in every vehicle. Call or text (782) 377-7533.";
+  'Book a licensed Charlottetown taxi 24/7 for YYG airport pickups, local rides and transportation across PEI. No surge pricing. Call or text 782-377-7533.';
 const OG_DESCRIPTION =
   '24/7 licensed taxi and airport transfers across Prince Edward Island. Regulated fares agreed before you travel, no surge pricing, dispatch answered by a person at any hour.';
 

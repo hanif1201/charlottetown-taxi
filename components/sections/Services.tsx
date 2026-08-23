@@ -7,14 +7,11 @@ export function Services() {
         <div className="head reveal">
           <span className="eyebrow">Our Services</span>
           <h2>
-            Our Charlottetown Taxi &amp; PEI Transport Services — <em>every journey on the Island</em>
+            Taxi &amp; Private Transportation Services <em>Across PEI</em>
           </h2>
           <p>
-            A ride across Charlottetown and a three-day golf itinerary are different disciplines.
-            Whether you need an airport chauffeur at dawn, cruise port transportation for a group, or
-            a driver who can talk you through the north shore, each service runs to its own standard —
-            the right vehicle, the right timing, and someone briefed on what the trip actually
-            involves.
+            From local Charlottetown rides and YYG airport transfers to golf groups, cruise
+            passengers and corporate travel, we match the vehicle and timing to the trip.
           </p>
         </div>
         <div className="svc-grid reveal">
@@ -40,7 +37,7 @@ export function Services() {
             <div
               className="simg simg-airport"
               role="img"
-              aria-label="Airplane at the gate at Charlottetown Airport YYG"
+              aria-label="Charlottetown Taxi branded Ford Bronco Sport SUV parked at Charlottetown Airport arrivals"
             />
             <div className="sbody">
               <h3>YYG Airport Taxi &amp; Transfers</h3>

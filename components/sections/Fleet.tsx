@@ -5,9 +5,12 @@ export function Fleet() {
         <div className="head reveal">
           <span className="eyebrow eyebrow-dk">The Fleet</span>
           <h2>
-            Our Taxi Fleet — <em>matched to your party and your bags</em>
+            Vehicles for Local Rides, Airport Luggage <em>&amp; PEI Groups</em>
           </h2>
-          <p>Tell us how many are travelling and what you&apos;re bringing — dispatch assigns the right vehicle automatically.</p>
+          <p>
+            Tell us your passenger and luggage count. Dispatch confirms the vehicle with the
+            space your trip actually requires.
+          </p>
         </div>
         <div className="fleet-grid reveal">
           <article className="veh">

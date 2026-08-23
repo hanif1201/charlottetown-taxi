@@ -5,9 +5,12 @@ export function Pricing() {
         <div className="head reveal">
           <span className="eyebrow">Pricing</span>
           <h2>
-            Charlottetown Taxi Fares — <em>regulated, agreed before you travel</em>
+            Transparent Charlottetown Taxi <em>&amp; YYG Airport Fares</em>
           </h2>
-          <p>Nothing is added at the end of the journey, and nothing changes because the weather did.</p>
+          <p>
+            Local and airport fares follow the applicable published schedules; longer trips are
+            quoted before travel. Confirmed price, no surge pricing.
+          </p>
         </div>
         <div className="reveal">
           <table className="ptable">
@@ -75,13 +78,13 @@ export function Pricing() {
                 </td>
                 <td className="detail">
                   Destinations outside the City&rsquo;s six zones fall outside the bylaw fare
-                  schedule and are charged per kilometre. Every PEI community plus off-Island
-                  travel; bridge and ferry tolls itemised, return trips priced together.
+                  schedule. Every PEI community plus off-Island travel; bridge and ferry tolls
+                  itemised, return trips priced together.
                 </td>
                 <td>
                   <span className="fare">
-                    $2.00 / km
-                    <small>quoted and agreed before you travel</small>
+                    Quoted
+                    <small>agreed with dispatch before you travel</small>
                   </span>
                 </td>
               </tr>

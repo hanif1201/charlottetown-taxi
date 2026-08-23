@@ -50,7 +50,7 @@ export function Reviews() {
         <div className="head reveal">
           <span className="eyebrow eyebrow-dk">Rider Feedback</span>
           <h2>
-            Charlottetown Taxi Reviews — <em>what people say after the ride</em>
+            Why PEI Riders <em>Choose Charlottetown Taxi</em>
           </h2>
           <a className="rev-see-all" href={GOOGLE_REVIEWS_URL} target="_blank" rel="noopener noreferrer">
             See all our reviews on Google →

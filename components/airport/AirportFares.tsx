@@ -2,7 +2,7 @@ const ZONE_SNAPSHOTS: { zone: string; price: string; priceSuffix?: string; desc:
   {
     zone: 'Charlottetown zone',
     price: '$20',
-    desc: 'Downtown, hotels and the waterfront — about 6 km, 10 to 15 minutes.',
+    desc: 'Downtown, hotels and the waterfront — about 8 km, typically 15 minutes.',
   },
   {
     zone: 'Stratford zone',

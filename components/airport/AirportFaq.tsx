@@ -29,7 +29,7 @@ const PRIMARY_LEFT: FaqItem[] = [
 const PRIMARY_RIGHT: FaqItem[] = [
   {
     q: 'Do you cover early-morning airport departures?',
-    a: 'Yes. Dispatch runs 24 hours, and early departures are pre-booked the night before so a vehicle is held for your exact time.',
+    a: 'Yes. Dispatch runs 24 hours. Book early for pre-dawn, summer and cruise-day travel — a ride is confirmed only when dispatch sends confirmation.',
   },
   {
     q: 'Can you take me from YYG to Cavendish or Summerside?',
@@ -48,7 +48,7 @@ const PRIMARY_RIGHT: FaqItem[] = [
 const MORE_LEFT: FaqItem[] = [
   {
     q: 'How far is Charlottetown Airport from the city centre?',
-    a: 'About six kilometres, which is a 10 to 15 minute drive in normal conditions.',
+    a: 'About 8 km, typically a 15 minute drive in normal conditions.',
   },
   {
     q: 'How early should I be picked up for my flight?',

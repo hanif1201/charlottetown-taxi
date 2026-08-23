@@ -16,10 +16,10 @@ const DESTINATIONS: Destination[] = [
   {
     fare: 'Zone fare · $20',
     title: 'YYG → Downtown Charlottetown',
-    distance: '6 km',
-    drive: '10–15 min',
+    distance: '8 km',
+    drive: 'typically 15 min',
     desc: 'Hotels on Grafton and Kent, Victoria Row and the waterfront. Our shortest run, and the busiest on a cruise day.',
-    linkHref: '/taxi-service/',
+    linkHref: '/#book',
     linkText: 'Charlottetown taxi service →',
   },
   {
@@ -28,7 +28,7 @@ const DESTINATIONS: Destination[] = [
     distance: '12 km',
     drive: '15–20 min',
     desc: 'Across the Hillsborough Bridge for Bunbury, Kinlock and the Tea Hill side.',
-    linkHref: '/taxi-service/',
+    linkHref: '/#book',
     linkText: 'Rides around Stratford →',
   },
   {
@@ -37,7 +37,7 @@ const DESTINATIONS: Destination[] = [
     distance: '17 km',
     drive: 'about 20 min',
     desc: 'West on the Trans-Canada for Cornwall, North River and Eliot River.',
-    linkHref: '/taxi-service/',
+    linkHref: '/#book',
     linkText: 'Rides around Cornwall →',
   },
   {
@@ -46,7 +46,7 @@ const DESTINATIONS: Destination[] = [
     distance: '38 km',
     drive: 'about 40 min',
     desc: 'Route 2 to Hunter River, then Route 13 north. The busiest visitor run on the Island in July and August.',
-    linkHref: '/island-tours/',
+    linkHref: '/#services',
     linkText: 'Cavendish and North Shore travel →',
   },
   {
@@ -55,7 +55,7 @@ const DESTINATIONS: Destination[] = [
     distance: '30 km',
     drive: 'about 30 min',
     desc: 'The harbour, the boardwalk and the cottages along Route 6.',
-    linkHref: '/island-tours/',
+    linkHref: '/#services',
     linkText: 'Island sightseeing travel →',
   },
   {
@@ -64,7 +64,7 @@ const DESTINATIONS: Destination[] = [
     distance: '60 km',
     drive: 'about 55 min',
     desc: 'Straight west for conferences, Holland College and the waterfront.',
-    linkHref: '/long-distance/',
+    linkHref: '/#services',
     linkText: 'Long-distance travel across PEI →',
   },
   {
@@ -73,7 +73,7 @@ const DESTINATIONS: Destination[] = [
     distance: '55 km',
     drive: 'about 50 min',
     desc: 'East along Route 3 for the Brudenell resort area, Georgetown and the Points East coast.',
-    linkHref: '/golf-transportation/',
+    linkHref: '/#services',
     linkText: 'Golf course transportation →',
   },
   {
@@ -82,7 +82,7 @@ const DESTINATIONS: Destination[] = [
     distance: '80 km',
     drive: 'about 1 h 15',
     desc: 'The longest regular airport run on the Island, and the connection for CTMA sailings to the Magdalen Islands.',
-    linkHref: '/long-distance/',
+    linkHref: '/#services',
     linkText: 'Travel to eastern PEI →',
   },
   {
@@ -100,7 +100,7 @@ const DESTINATIONS: Destination[] = [
     distance: '60 km',
     drive: 'about 45 min',
     desc: 'Borden-Carleton for the bridge crossing and onward connections to New Brunswick.',
-    linkHref: '/long-distance/',
+    linkHref: '/#services',
     linkText: 'Off-Island connections →',
   },
 ];

@@ -4,7 +4,7 @@ const GUIDES: { imgClass: string; imgLabel: string; cat: string; title: string; 
     imgLabel: 'Charlottetown Airport arrivals pickup area',
     cat: 'Arrivals',
     title: 'YYG to downtown Charlottetown: what the drive is really like',
-    desc: 'Six kilometres, ten to fifteen minutes — and the three summer scenarios that turn it into thirty.',
+    desc: '8 km, typically fifteen minutes — and the three summer scenarios that turn it into thirty.',
     href: '/blog/yyg-to-downtown-charlottetown/',
     linkText: 'Read the YYG to downtown guide',
   },

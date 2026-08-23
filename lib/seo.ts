@@ -14,7 +14,7 @@ export const businessJsonLd = {
       '@id': `${SITE_URL}/#business`,
       name: 'Charlottetown Taxi',
       description:
-        'Licensed 24/7 taxi and private transportation across Prince Edward Island — city rides, YYG airport transfers, cruise and ferry transfers, golf transportation, Island tours, corporate, wedding and medical travel.',
+        'Licensed 24/7 taxi and private transportation across Prince Edward Island — city rides, YYG airport transfers, cruise and ferry transfers, golf transportation, Island tours, corporate, wedding and non-emergency appointment travel.',
       url: `${SITE_URL}/`,
       telephone: '+1-782-377-7533',
       email: 'info@charlottetowntaxi.ca',
@@ -94,7 +94,10 @@ export const businessJsonLd = {
             '@type': 'Offer',
             itemOffered: { '@type': 'Service', name: 'Long Distance Transportation' },
           },
-          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Medical Transportation' } },
+          {
+            '@type': 'Offer',
+            itemOffered: { '@type': 'Service', name: 'Non-Emergency Appointment Transportation' },
+          },
         ],
       },
     },

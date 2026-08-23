@@ -15,7 +15,7 @@ const FAB_SERVICES: [string, ServiceKey][] = [
   ['Wedding Transportation', 'wedding'],
   ['Hourly Chauffeur', 'hourly'],
   ['Long Distance', 'long'],
-  ['Medical Transportation', 'medical'],
+  ['Non-Emergency Appointment', 'medical'],
 ];
 
 export function FabBooking() {

@@ -161,7 +161,7 @@ export const SERVICES: Record<ServiceKey, ServiceDef> = {
   },
   medical: {
     key: 'medical',
-    title: 'Medical Transportation',
+    title: 'Non-Emergency Appointment Transportation',
     pickerLabel: 'Medical',
     pickerDesc: 'Appointments',
     sub: 'Punctual, scheduled rides to and from appointments across PEI.',
