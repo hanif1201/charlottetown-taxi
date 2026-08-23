@@ -21,17 +21,16 @@ export function Hero() {
         </p>
 
         <h1 id="heroTitle" className="fade" style={delayVar('.15s')}>
-          24/7 Charlottetown Taxi <em>&amp; YYG Airport Transfers</em>
+          Charlottetown Taxi for <em>Every Journey Across PEI &amp; Beyond</em>
         </h1>
 
         <p className="hc-lede fade" style={delayVar('.28s')}>
-          Pre-book local rides, airport pickups, long-distance trips and private transportation
-          anywhere on Prince Edward Island.
+          24/7 local rides, YYG airport transfers, cruise and ferry pickups, private tours, golf
+          trips, weddings, corporate travel and long-distance transportation across the Maritimes.
         </p>
 
         <p className="hc-line fade" style={delayVar('.44s')}>
-          Every booking personally confirmed. Every vehicle matched to your passengers, luggage
-          and schedule.
+          One local team for every arrival, event and Island itinerary.
         </p>
 
         <div className="hc-actions fade" style={delayVar('.54s')}>
