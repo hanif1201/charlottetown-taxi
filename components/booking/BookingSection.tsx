@@ -8,6 +8,16 @@ import { SERVICES, SERVICE_ORDER } from '@/lib/services';
 export function BookingSection() {
   const { state, dispatch } = useBooking();
 
+  function selectService(key: (typeof SERVICE_ORDER)[number]) {
+    dispatch({ type: 'SET_SVC', svc: key });
+    // The form and its "Your booking" summary update in place — without this,
+    // a visitor scrolled past the picker (mobile especially) sees no change.
+    document.getElementById('formTitle')?.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start',
+    });
+  }
+
   return (
     <section className="sec" id="book">
       <div className="wrap">
@@ -32,7 +42,7 @@ export function BookingSection() {
                 className="pick"
                 role="tab"
                 aria-selected={state.svc === key}
-                onClick={() => dispatch({ type: 'SET_SVC', svc: key })}
+                onClick={() => selectService(key)}
               >
                 <span className="pn">{s.pickerLabel}</span>
                 <span className="pd">{s.pickerDesc}</span>
