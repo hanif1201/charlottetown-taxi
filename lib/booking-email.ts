@@ -10,6 +10,26 @@ function pad(s: string): string {
   return (s + ':').padEnd(18, ' ');
 }
 
+// `payload.when`/`returnWhen` are raw `datetime-local` values ("2026-09-05T03:28") with
+// no timezone — split by hand rather than going through Date's timezone-aware parsing/
+// formatting, so the wall-clock time the customer picked is never shifted.
+function formatDateTime(dt: string): { date: string; time: string } {
+  const [datePart, timePart] = dt.split('T');
+  const [y, m, d] = (datePart || '').split('-').map(Number);
+  const [hStr, minStr] = (timePart || '').split(':');
+  const h = Number(hStr);
+  if (!y || !m || !d || Number.isNaN(h) || !minStr) return { date: dt, time: '' };
+
+  const date = new Date(y, m - 1, d).toLocaleDateString('en-CA', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+  const ampm = h >= 12 ? 'PM' : 'AM';
+  const h12 = h % 12 === 0 ? 12 : h % 12;
+  return { date, time: `${h12}:${minStr} ${ampm}` };
+}
+
 interface GolfCourseStop {
   course: string;
   teeTime?: string;
@@ -29,18 +49,20 @@ export function formatBookingText(payload: BookingPayload): string {
   lines.push('');
 
   lines.push('-- JOURNEY ------------------------');
-  const journeyKeys: [string, string][] = [
-    ['pickup', 'Pickup'],
-    ['dropoff', 'Dropoff'],
-    ['when', 'When'],
-    ['waitTime', 'Wait Time'],
-    ['returnWhen', 'Return When'],
-    ['returnFrom', 'Return From'],
-  ];
-  for (const [key, text] of journeyKeys) {
-    const v = payload[key as keyof BookingPayload];
-    if (v) lines.push(pad(text) + String(v));
+  if (payload.pickup) lines.push(pad('Pickup') + payload.pickup);
+  if (payload.dropoff) lines.push(pad('Dropoff') + payload.dropoff);
+  if (payload.when) {
+    const { date, time } = formatDateTime(payload.when);
+    lines.push(pad('Pickup date') + date);
+    lines.push(pad('Pickup time') + time);
   }
+  if (payload.waitTime) lines.push(pad('Wait Time') + payload.waitTime);
+  if (payload.returnWhen) {
+    const { date, time } = formatDateTime(payload.returnWhen);
+    lines.push(pad('Return date') + date);
+    lines.push(pad('Return time') + time);
+  }
+  if (payload.returnFrom) lines.push(pad('Return From') + payload.returnFrom);
 
   const itinerary = payload.serviceDetail.itinerary as GolfItineraryDay[] | undefined;
   if (Array.isArray(itinerary) && itinerary.length) {
