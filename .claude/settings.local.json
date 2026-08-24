@@ -10,7 +10,9 @@
       "Bash(npx tsc *)",
       "Bash(npx next *)",
       "Bash(curl -sf http://localhost:3000/)",
-      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")"
+      "Bash(node -e \"console.log\\(require.resolve\\('playwright'\\)\\)\")",
+      "Bash(vercel deploy *)",
+      "Bash(vercel deploy)"
     ]
   }
 }
