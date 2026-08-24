@@ -10,6 +10,7 @@ const DETAIL_FIELDS_BY_SERVICE: Partial<Record<string, string[]>> = {
   hourly: ['hours', 'purpose', 'itinerary'],
   long: ['destcity', 'crossing', 'stopsneeded'],
   medical: ['facility', 'facOther', 'apptTime', 'arriveEarly', 'companion', 'recurringMed'],
+  golf: ['golfers', 'golfbags', 'extrabags', 'stay', 'clubstorage', 'between'],
 };
 
 export function buildBookingPayload(state: BookingState, pageUrl: string) {
