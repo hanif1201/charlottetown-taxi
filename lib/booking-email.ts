@@ -1,7 +1,8 @@
 import { Resend } from 'resend';
 import { BookingPayload } from '@/lib/validation';
+import { generateBookingPdf } from '@/lib/booking-pdf';
 
-function label(key: string): string {
+export function label(key: string): string {
   const spaced = key.replace(/([A-Z])/g, ' $1');
   return spaced.charAt(0).toUpperCase() + spaced.slice(1);
 }
@@ -13,7 +14,7 @@ function pad(s: string): string {
 // `payload.when`/`returnWhen` are raw `datetime-local` values ("2026-09-05T03:28") with
 // no timezone — split by hand rather than going through Date's timezone-aware parsing/
 // formatting, so the wall-clock time the customer picked is never shifted.
-function formatDateTime(dt: string): { date: string; time: string } {
+export function formatDateTime(dt: string): { date: string; time: string } {
   const [datePart, timePart] = dt.split('T');
   const [y, m, d] = (datePart || '').split('-').map(Number);
   const [hStr, minStr] = (timePart || '').split(':');
@@ -30,12 +31,12 @@ function formatDateTime(dt: string): { date: string; time: string } {
   return { date, time: `${h12}:${minStr} ${ampm}` };
 }
 
-interface GolfCourseStop {
+export interface GolfCourseStop {
   course: string;
   teeTime?: string;
 }
 
-interface GolfItineraryDay {
+export interface GolfItineraryDay {
   day: number;
   date?: string;
   pickup?: string;
@@ -136,11 +137,15 @@ export async function sendBookingEmail(payload: BookingPayload): Promise<void> {
     return;
   }
 
+  const pdf = await generateBookingPdf(payload);
+  const filename = `booking-${payload.name.replace(/[^a-z0-9]+/gi, '-').toLowerCase() || 'request'}.pdf`;
+
   const resend = new Resend(apiKey);
   await resend.emails.send({
     from,
     to,
     subject: `New booking — ${payload.service} — ${payload.name}`,
-    text: formatBookingText(payload),
+    text: `New booking request from ${payload.name} for ${payload.service}. Full details attached as PDF.`,
+    attachments: [{ filename, content: pdf }],
   });
 }
