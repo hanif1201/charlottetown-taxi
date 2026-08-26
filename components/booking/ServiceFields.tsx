@@ -73,6 +73,30 @@ export function ServiceTopFields() {
               />
             </div>
           </div>
+          <div className="frow">
+            <div className="field">
+              <label htmlFor="payment">
+                Payment method <span className="rq">*</span>
+              </label>
+              <select id="payment" value={val('payment')} onChange={(e) => setField('payment', e.target.value)}>
+                <option value="">Select</option>
+                <option>Card on pickup</option>
+                <option>Cash to driver</option>
+                <option>Corporate account</option>
+              </select>
+              <div className="err">Please choose a payment method.</div>
+            </div>
+            <div className="field">
+              <label htmlFor="oversized">Oversized items</label>
+              <select id="oversized" value={val('oversized')} onChange={(e) => setField('oversized', e.target.value)}>
+                <option>None</option>
+                <option>Golf clubs</option>
+                <option>Skis or snowboard</option>
+                <option>Musical instrument</option>
+                <option>Other — noted below</option>
+              </select>
+            </div>
+          </div>
         </>
       );
 
