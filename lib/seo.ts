@@ -1,10 +1,9 @@
 export const SITE_URL = 'https://charlottetowntaxi.ca';
 
-// charlottetowntaxi.ca is not live yet — this build is only reachable at its
-// vercel.app URL. Flip to true once the custom domain is connected and
-// serving this deployment: it drives indexing (layout.tsx), robots.txt
+// charlottetowntaxi.ca is now connected and serving this deployment (DNS
+// confirmed 2026-08-26) — drives indexing (layout.tsx), robots.txt
 // (robots.ts) and the sitemap (sitemap.ts) together.
-export const SITE_IS_LIVE = false;
+export const SITE_IS_LIVE = true;
 
 export const businessJsonLd = {
   '@context': 'https://schema.org',
